@@ -9,13 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".acti_dprt_cse" />
+        <activity android:name=".acti_dprt_eee" />
+        <activity android:name=".acti_dprt_ece" />
+        <activity android:name=".acti_dprt_mech" />
+        <activity android:name=".acti_dprt_it" />
+        <activity android:name=".acti_dprt_general" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".AboutUS"></activity>
     </application>
 
 </manifest>

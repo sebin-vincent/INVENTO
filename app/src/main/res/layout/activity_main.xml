@@ -4,15 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sebinvincent.invento.MainActivity">
+    tools:context="com.example.sebinvincent.invento.MainActivity"
+    android:background="@color/background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/cse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-40dp"
+                android:background="@drawable/btnbackcse"
+                android:gravity="center|bottom"
+                android:onClick="click"
+                android:rotation="270"
+                android:text="CSE"
+                android:transformPivotX="40dp"
+                android:transformPivotY="40dp" />
+
+            <Button
+                android:id="@+id/it"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnbackit"
+                android:gravity="center|bottom"
+                android:onClick="click"
+                android:rotation="270"
+                android:text="I T"
+                android:transformPivotX="40dp"
+                android:transformPivotY="40dp" />
+
+            <Button
+                android:id="@+id/ece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnbackece"
+                android:gravity="center|bottom"
+                android:onClick="click"
+                android:rotation="270"
+                android:text="ECE"
+                android:textAllCaps="false"
+                android:transformPivotX="40dp"
+                android:transformPivotY="40dp" />
+
+            <Button
+                android:id="@+id/eee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnbackeee"
+                android:gravity="center|bottom"
+                android:onClick="click"
+                android:rotation="270"
+                android:text="EEE"
+                android:transformPivotX="40dp"
+                android:transformPivotY="40dp" />
+
+            <Button
+                android:id="@+id/mech"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnbackmech"
+                android:gravity="center|bottom"
+                android:onClick="click"
+                android:rotation="270"
+                android:text="MECH"
+                android:transformPivotX="40dp"
+                android:transformPivotY="40dp" />
+
+            <Button
+                android:id="@+id/general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnbackmech"
+                android:gravity="center|bottom"
+                android:onClick="click"
+                android:rotation="270"
+                android:textSize="11dp"
+                android:text="GENERAL"
+                android:transformPivotX="40dp"
+                android:transformPivotY="40dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="top"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:padding="20dp"
+                android:id="@+id/imageView2"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:src="@drawable/cse_drawing" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textSize="25sp"
+                android:id="@+id/dprtmntname"
+                android:text="COMPUTER SCIENCE \nAND \nENGINEERING"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/back"
+                android:layout_gravity="center"
+                android:text="SHOW MORE"
+                android:textColor="@color/white"
+                android:id="@+id/showmore"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
