@@ -1,163 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sebinvincent.invento.MainActivity"
-    android:background="@color/background">
+    tools:context="com.example.sebinvincent.invento.main_activiy">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="bottom|center_vertical|center_horizontal"
-            android:orientation="vertical">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-
-            <Button
-                android:id="@+id/cse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-40dp"
-                android:background="@drawable/btnbackcse"
-                android:gravity="center|bottom"
-                android:onClick="click"
-                android:rotation="270"
-                android:text="CSE"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
-
-            <Button
-                android:id="@+id/it"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnbackit"
-                android:gravity="center|bottom"
-                android:onClick="click"
-                android:rotation="270"
-                android:text="I T"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
-
-            <Button
-                android:id="@+id/ece"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnbackece"
-                android:gravity="center|bottom"
-                android:onClick="click"
-                android:rotation="270"
-                android:text="ECE"
-                android:textAllCaps="false"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
-
-            <Button
-                android:id="@+id/eee"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnbackeee"
-                android:gravity="center|bottom"
-                android:onClick="click"
-                android:rotation="270"
-                android:text="EEE"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
-
-            <Button
-                android:id="@+id/mech"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnbackmech"
-                android:gravity="center|bottom"
-                android:onClick="click"
-                android:rotation="270"
-                android:text="MECH"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
-
-            <Button
-                android:id="@+id/general"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnbackmech"
-                android:gravity="center|bottom"
-                android:onClick="click"
-                android:rotation="270"
-                android:textSize="11dp"
-                android:text="GENERAL"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:gravity="top"
-            android:layout_gravity="center"
-            android:layout_height="match_parent">
-            <ImageView
-                android:padding="20dp"
-                android:id="@+id/imageView2"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:src="@drawable/cse_drawing" />
+            android:layout_height="?attr/actionBarSize"
+            app:collapseIcon="@drawable/more"
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:textSize="25sp"
-                android:id="@+id/dprtmntname"
-                android:text="COMPUTER SCIENCE \nAND \nENGINEERING"
-                />
+            android:background="#171A3B"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/back"
-                android:layout_gravity="center"
-                android:text="SHOW MORE"
-                android:textColor="@color/white"
-                android:id="@+id/showmore"
-                />
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home" />
 
 
 
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

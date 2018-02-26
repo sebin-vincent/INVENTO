@@ -1,18 +1,23 @@
 package com.example.sebinvincent.invento;
 
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class main_activiy extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
 
     Button it,cs,eee,mech,ec,general;
     TextView textView;
+    TextView showmore;
     String department;
 
     @Override
@@ -21,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        department="cse";
 
         it=findViewById(R.id.it);
         cs=findViewById(R.id.cse);
@@ -29,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mech=findViewById(R.id.mech);
         general=findViewById(R.id.general);
         textView=(TextView)findViewById(R.id.dprtmntname);
+        showmore=(TextView)findViewById(R.id.showmore);
 
 
         it.setRotation(270);
@@ -39,36 +46,59 @@ public class MainActivity extends AppCompatActivity {
         mech.setRotation(270);
         general.setRotation(270);
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        cs.setTranslationX(40);
+        it.setTranslationX(0);
+        ec.setTranslationX(0);
+        eee.setTranslationX(0);
+        mech.setTranslationX(0);
+        general.setTranslationX(0);
+
+        cs.setGravity(Gravity.CENTER | Gravity.RIGHT);
+        it.setGravity(Gravity.CENTER | Gravity.BOTTOM);
+        ec.setGravity(Gravity.CENTER | Gravity.BOTTOM);
+        mech.setGravity(Gravity.CENTER | Gravity.BOTTOM);
+        eee.setGravity(Gravity.CENTER | Gravity.BOTTOM);
+        general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
+
+        showmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch (department){
 
                     case "cse":
 
-                        //do nothing
+
+                        Intent intent=new Intent(getApplicationContext(),acti_dprt_cse.class);
+                        startActivity(intent);
+
                         break;
                     case "it":
 
-                        //do nothing
+                         intent=new Intent(getApplicationContext(),acti_dprt_it.class);
+                         startActivity(intent);
+
                         break;
 
                     case "mech":
-                        //do nothing
+                        intent=new Intent(getApplicationContext(),acti_dprt_mech.class);
+                        startActivity(intent);
                         break;
 
                     case "ece":
 
-                        //do nothing
+                        intent=new Intent(getApplicationContext(),acti_dprt_ece.class);
+                        startActivity(intent);
                         break;
 
                     case "eee":
 
-                        //do nothing
+                        intent=new Intent(getApplicationContext(),acti_dprt_eee.class);
+                        startActivity(intent);
                         break;
                     case "general":
 
-                        //do nothing
+                        intent=new Intent(getApplicationContext(),acti_dprt_general.class);
+                        startActivity(intent);
                         break;
                 }
             }
@@ -267,5 +297,10 @@ public class MainActivity extends AppCompatActivity {
                 cs.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 break;
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
     }
 }

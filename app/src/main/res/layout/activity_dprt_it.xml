@@ -4,6 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sebinvincent.invento.acti_dprt_it">
+    tools:context="com.example.sebinvincent.invento.acti_dprt_it"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this is dummy for \n information tech"
+        android:textSize="30dp"
+        style="bold"
+        android:gravity="center"
+        />
+
+
 
 </android.support.constraint.ConstraintLayout>
