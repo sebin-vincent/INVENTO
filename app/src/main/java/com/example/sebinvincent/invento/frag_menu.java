@@ -2,31 +2,28 @@ package com.example.sebinvincent.invento;
 
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.app.Fragment;
+
 
 /**
- * Created by Rakshith on 27-Feb-18.
+ * A simple {@link Fragment} subclass.
  */
+public class frag_menu extends Fragment {
 
-public class frag_menu extends Fragment{
 
-    public frag_menu(){
-
+    public frag_menu() {
+        // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View view;
-
-        view = inflater.inflate(R.layout.frag_menu,container, false);
-        return view;
+        return inflater.inflate(R.layout.frag_menu,container, false);
     }
-
 
 }
