@@ -1,7 +1,8 @@
 package com.example.sebinvincent.invento;
 
-
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -30,20 +31,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class frag_cse_talk_list extends Fragment {
+public class frag_eee_comp_list extends Fragment {
 
     private static final String url_data="https://simplifiedcoding.net/demos/marvel";
+
     private RecyclerView recyclerView;
     private Myadapter adapter;
 
     private List<card_view> listItems;
 
 
-
-    public frag_cse_talk_list() {
+    public frag_eee_comp_list() {
         // Required empty public constructor
     }
 
@@ -51,9 +49,8 @@ public class frag_cse_talk_list extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View view;
-        view=inflater.inflate(R.layout.frag_cse_work_list, container, false);
+        view=inflater.inflate(R.layout.frag_eee_comp, container, false);
 
         recyclerView=(RecyclerView)view.findViewById(R.id.recyclerview);
 
@@ -70,9 +67,10 @@ public class frag_cse_talk_list extends Fragment {
 
 
 
-        return view;
 
+        return view;
     }
+
 
     private  void loadRecyclerviewData(){
 
@@ -127,6 +125,7 @@ public class frag_cse_talk_list extends Fragment {
 
 
     }
+
     Interface_Frag_Communi communication=new Interface_Frag_Communi() {
         @Override
         public void respond(String header,String discrptr,String photo,String venue,String date,String time) {

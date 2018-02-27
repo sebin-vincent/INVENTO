@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class frag_cse_talk_list extends Fragment {
+public class frag_eee_talk_lsit extends Fragment {
 
     private static final String url_data="https://simplifiedcoding.net/demos/marvel";
     private RecyclerView recyclerView;
@@ -42,8 +42,7 @@ public class frag_cse_talk_list extends Fragment {
     private List<card_view> listItems;
 
 
-
-    public frag_cse_talk_list() {
+    public frag_eee_talk_lsit() {
         // Required empty public constructor
     }
 
@@ -51,9 +50,8 @@ public class frag_cse_talk_list extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view;
-        view=inflater.inflate(R.layout.frag_cse_work_list, container, false);
+       View view;
+       view=inflater.inflate(R.layout.frag_eee_talk_lsit, container, false);
 
         recyclerView=(RecyclerView)view.findViewById(R.id.recyclerview);
 
@@ -71,9 +69,7 @@ public class frag_cse_talk_list extends Fragment {
 
 
         return view;
-
     }
-
     private  void loadRecyclerviewData(){
 
         final ProgressDialog progressDialog =new ProgressDialog(getActivity());
@@ -145,6 +141,8 @@ public class frag_cse_talk_list extends Fragment {
         }
 
     };
+
+
 
 
 }

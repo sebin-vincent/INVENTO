@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -29,23 +30,20 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class frag_cse_talk_list extends Fragment {
+public class frag_eee_work_list extends Fragment {
 
     private static final String url_data="https://simplifiedcoding.net/demos/marvel";
+
     private RecyclerView recyclerView;
     private Myadapter adapter;
 
     private List<card_view> listItems;
 
 
-
-    public frag_cse_talk_list() {
+    public frag_eee_work_list() {
         // Required empty public constructor
     }
+
 
 
     @Override
@@ -53,7 +51,7 @@ public class frag_cse_talk_list extends Fragment {
                              Bundle savedInstanceState) {
 
         View view;
-        view=inflater.inflate(R.layout.frag_cse_work_list, container, false);
+        view=inflater.inflate(R.layout.frag_eee_work, container, false);
 
         recyclerView=(RecyclerView)view.findViewById(R.id.recyclerview);
 
@@ -69,9 +67,7 @@ public class frag_cse_talk_list extends Fragment {
         loadRecyclerviewData();
 
 
-
         return view;
-
     }
 
     private  void loadRecyclerviewData(){
@@ -127,6 +123,7 @@ public class frag_cse_talk_list extends Fragment {
 
 
     }
+
     Interface_Frag_Communi communication=new Interface_Frag_Communi() {
         @Override
         public void respond(String header,String discrptr,String photo,String venue,String date,String time) {

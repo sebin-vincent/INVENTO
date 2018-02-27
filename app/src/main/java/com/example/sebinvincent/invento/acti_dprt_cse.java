@@ -19,7 +19,6 @@ public class acti_dprt_cse extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dprt_cse);
 
-        dprt_heading=(TextView)findViewById(R.id.cse_head);
         menu=(ImageView)findViewById(R.id.menu_cse);
 
         fragmentTransaction=getSupportFragmentManager().beginTransaction();
