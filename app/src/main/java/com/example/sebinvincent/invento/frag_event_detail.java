@@ -26,18 +26,23 @@ import java.util.Calendar;
 
 public class frag_event_detail extends Fragment {
 
-
-    TextView reminder;
-    TextView textView;
+    TextView eventname;
+    TextView venue_reset;
+    TextView date_reset;
+    TextView time_reset;
     TextView eventdet;
     ImageView picture;
+    TextView reminder;
+    TextView showmore;
+
+
     String imager;
     String eventdetail;
-   public String event_name;
-   public String date;
-   public String time;
-    Uri uri;
-    byte[] b;
+    public String event_name;
+    public String date;
+    public String time;
+    public  String venue;
+
 
     public frag_event_detail() {
 
@@ -49,12 +54,20 @@ public class frag_event_detail extends Fragment {
         View view;
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.frag_event_detail, container, false);
-        textView=(TextView)view.findViewById(R.id.even_name);
+        eventname=(TextView)view.findViewById(R.id.even_name);
         eventdet=(TextView)view.findViewById(R.id.event_detail);
         picture=(ImageView) view.findViewById(R.id.imageView3);
-        Button remind=(Button)view.findViewById(R.id.showmore);
-        textView.setText(event_name);
+        reminder=(TextView)view.findViewById(R.id.reminder);
+        date_reset=(TextView)view.findViewById(R.id.date_detail);
+        showmore=(TextView)view.findViewById(R.id.showingmore);
+        venue_reset=(TextView)view.findViewById(R.id.venue_detail);
+
+
+
+        eventname.setText(event_name);
         eventdet.setText(eventdetail);
+        date_reset.setText(date);
+        venue_reset.setText(venue);
 
         ImageRequest imageRequest=new ImageRequest(imager, new Response.Listener<Bitmap>() {
             @Override
@@ -69,7 +82,7 @@ public class frag_event_detail extends Fragment {
         });
         Mysingleton.getMinstance(getActivity()).addToRequestQue(imageRequest);
 
-        remind.setOnClickListener(new View.OnClickListener() {
+        reminder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -124,7 +137,7 @@ public class frag_event_detail extends Fragment {
         imager=getArguments().getString("IMAGE");
         time=getArguments().getString("TIME");
         date=getArguments().getString("DATE");
-
+        venue=getArguments().getString("VENUE");
 
     }
 
