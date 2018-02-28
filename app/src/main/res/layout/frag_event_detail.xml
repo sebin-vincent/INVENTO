@@ -5,6 +5,7 @@
     android:background="#171A3B"
     android:orientation="vertical">
 
+
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -127,6 +128,8 @@
         android:text="SHOW MORE"
         android:textColor="#ffffff"
         android:textStyle="bold" />
+
+
 
 
 </RelativeLayout>

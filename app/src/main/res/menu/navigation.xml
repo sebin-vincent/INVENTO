@@ -17,4 +17,14 @@
         android:orderInCategory="100"
         android:title="Notifications"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/reachus"
+        android:orderInCategory="100"
+        android:title="Reach us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/profile"
+        android:orderInCategory="100"
+        android:title="Profile"
+        app:showAsAction="never" />
 </menu>

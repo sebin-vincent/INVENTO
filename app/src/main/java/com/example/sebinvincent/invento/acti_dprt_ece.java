@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class acti_dprt_ece extends AppCompatActivity {
 
-    int occurence_time=0;
+    public int occurence_time=0;
     TextView dprt_heading;
     ImageView menu;
 
@@ -45,5 +45,13 @@ public class acti_dprt_ece extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        occurence_time=0;
     }
 }

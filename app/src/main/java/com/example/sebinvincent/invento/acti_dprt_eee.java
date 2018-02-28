@@ -51,7 +51,6 @@ public class acti_dprt_eee extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        getSupportFragmentManager().popBackStack();
         occurance_time=0;
 
     }

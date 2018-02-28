@@ -40,11 +40,16 @@ public class acti_dprt_mech extends AppCompatActivity {
                     occurence_time=1;
                 }
                 else {
-
                     getSupportFragmentManager().popBackStack();
                     occurence_time=0;
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        occurence_time=0;
     }
 }
