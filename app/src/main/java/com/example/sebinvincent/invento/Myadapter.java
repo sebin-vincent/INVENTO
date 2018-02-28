@@ -57,7 +57,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
         bundle.putString("NAME",listItems.get(position).getHead());
         bundle.putString("DETAIL",listItems.get(position).getDesc());
         bundle.putString("IMAGE",listItems.get(position).getImage_url());
-        bundle.putString("VENUE","collage");
+        bundle.putString("VENUE","college");
         bundle.putString("DATE","30/05/2018");
         bundle.putString("TIME","09:00to12:00");
 

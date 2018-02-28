@@ -16,6 +16,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -116,14 +123,17 @@ public class frag_ece_comp_list extends Fragment {
 
     }
 
-    FragmentCommunication communication=new FragmentCommunication() {
+    Interface_Frag_Communi communication=new Interface_Frag_Communi() {
         @Override
-        public void respond(String header,String discrptr,String photo) {
+        public void respond(String header,String discrptr,String photo,String venue,String date,String time) {
             frag_event_detail fragmentB=new frag_event_detail();
             Bundle bundle=new Bundle();
             bundle.putString("NAME",header);
             bundle.putString("DETAIL",discrptr);
             bundle.putString("IMAGE",photo);
+            bundle.putString("VENUE",venue);
+            bundle.putString("DATE",date);
+            bundle.putString("TIME",time);
             fragmentB.setArguments(bundle);
             FragmentManager manager=getFragmentManager();
             FragmentTransaction transaction=manager.beginTransaction();

@@ -30,14 +30,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class frag_ece_talk_list extends Fragment {
+public class frag_mech_comp_list extends Fragment {
 
     private static final String url_data="https://simplifiedcoding.net/demos/marvel";
 
     private RecyclerView recyclerView;
     private Myadapter adapter;
 
-    public frag_ece_talk_list() {
+    public frag_mech_comp_list() {
         // Required empty public constructor
     }
 
@@ -49,9 +49,9 @@ public class frag_ece_talk_list extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.frag_ece_comp_list, container, false);
+        View view = inflater.inflate(R.layout.frag_mech_comp_list, container, false);
 
-        recyclerView=(RecyclerView)view.findViewById(R.id.recyclerview_ece);
+        recyclerView=(RecyclerView)view.findViewById(R.id.recyclerview_mech);
 
         recyclerView.setHasFixedSize(true);
 
