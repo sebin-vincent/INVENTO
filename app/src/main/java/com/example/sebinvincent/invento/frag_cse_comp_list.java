@@ -99,7 +99,7 @@ public class frag_cse_comp_list extends Fragment {
             cse_data_array array= new cse_data_array();
 
             int l=array.getLength();
-            Uri uri = Uri.parse("android.resource://com.example.anoop.buttonanimation/drawable/loadings");
+            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
             progressDialog.dismiss();
 
 
@@ -158,7 +158,7 @@ public class frag_cse_comp_list extends Fragment {
                             cse_data_array array= new cse_data_array();
 
                             int l=array.getLength();
-                            Uri uri = Uri.parse("android.resource://com.example.anoop.buttonanimation/drawable/loadings");
+                            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
                             progressDialog.dismiss();
 
 
