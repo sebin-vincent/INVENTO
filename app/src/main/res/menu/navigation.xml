@@ -12,4 +12,9 @@
         android:orderInCategory="100"
         android:title="Developers"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/notifications"
+        android:orderInCategory="100"
+        android:title="Notifications"
+        app:showAsAction="never" />
 </menu>

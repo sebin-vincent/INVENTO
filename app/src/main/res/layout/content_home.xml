@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.sebinvincent.invento.main_activiy"
-    tools:showIn="@layout/activity_main"
-    android:background="@color/background">
+    tools:showIn="@layout/activity_home"
+
+    >
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.anoop.buttonanimation.Home"
+    tools:showIn="@layout/activity_home"-->
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -16,14 +28,15 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="0.20"
             android:gravity="bottom|center_vertical|center_horizontal"
             android:orientation="vertical">
 
@@ -31,97 +44,107 @@
             <Button
                 android:id="@+id/cse"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
                 android:layout_marginLeft="-40dp"
+                android:layout_marginStart="-40dp"
+                android:layout_weight="0.20"
                 android:background="@drawable/btnbackcse"
                 android:gravity="center|bottom"
                 android:onClick="click"
+                android:padding="10dp"
                 android:rotation="270"
-                android:text="CSE"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
+                android:text="CSE" />
 
             <Button
                 android:id="@+id/it"
-
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
                 android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="-40dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="0.20"
                 android:background="@drawable/btnbackit"
                 android:gravity="center|bottom"
                 android:onClick="click"
+                android:padding="10dp"
                 android:rotation="270"
-                android:text="I T"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
+                android:text="I T" />
 
             <Button
                 android:id="@+id/ece"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="-40dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="0.20"
                 android:background="@drawable/btnbackece"
                 android:gravity="center|bottom"
                 android:onClick="click"
+                android:padding="10dp"
                 android:rotation="270"
                 android:text="ECE"
-                android:textAllCaps="false"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/eee"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="-40dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="0.20"
                 android:background="@drawable/btnbackeee"
                 android:gravity="center|bottom"
                 android:onClick="click"
+                android:padding="10dp"
                 android:rotation="270"
-                android:text="EEE"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
+                android:text="EEE" />
 
             <Button
                 android:id="@+id/mech"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="-40dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="0.20"
                 android:background="@drawable/btnbackmech"
                 android:gravity="center|bottom"
                 android:onClick="click"
+                android:padding="10dp"
                 android:rotation="270"
-                android:text="MECH"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
+                android:text="MECH" />
 
             <Button
                 android:id="@+id/general"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginLeft="-40dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnbackmech"
+                android:layout_marginStart="-40dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="0.20"
+                android:background="@drawable/btnbackgenerall"
                 android:gravity="center|bottom"
                 android:onClick="click"
+                android:padding="5dp"
                 android:rotation="270"
                 android:text="GENERAL"
-                android:textSize="11dp"
-                android:transformPivotX="40dp"
-                android:transformPivotY="40dp" />
+                android:textSize="12sp"
+
+                />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="top"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
             android:orientation="vertical">
 
             <ImageView
@@ -160,5 +183,6 @@
 
 
     </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
