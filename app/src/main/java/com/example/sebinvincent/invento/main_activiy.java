@@ -21,6 +21,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
     TextView textView;
     TextView showmore;
     String department;
+    //new comment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
