@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context="com.example.sebinvincent.invento.main_activiy">
 
 
@@ -22,7 +23,7 @@
             android:layout_height="?attr/actionBarSize"
             app:collapseIcon="@drawable/more"
 
-            android:background="?android:attr/colorBackground"
+            android:background="@color/background"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>

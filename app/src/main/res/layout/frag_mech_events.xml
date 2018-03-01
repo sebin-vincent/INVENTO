@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#171A3B"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:padding="20dp"
+        android:id="@+id/mech_comp"
+        android:layout_width="wrap_content"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:src="@drawable/competitions"
+        android:background="#171A3B"
+        android:layout_weight="1"
+
+        />
+
+    <ImageView
+        android:padding="20dp"
+        android:id="@+id/mech_wrkshp"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:src="@drawable/workshops"
+        android:background="#171A3B"
+        android:elevation="3dp"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:padding="20dp"
+        android:id="@+id/mech_talksndshow"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:src="@drawable/talks"
+        android:background="#171A3B"
+        android:elevation="3dp"
+        android:layout_weight="1"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+
