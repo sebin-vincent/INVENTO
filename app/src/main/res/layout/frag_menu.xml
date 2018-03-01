@@ -10,52 +10,75 @@
         android:orientation="vertical"
 
         >
-
+    //id "cseevents" used to represent cse event page
     <Button
+        android:id="@+id/cseevents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="cse"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:padding="5dp"
-        android:shadowColor="@color/transparent"/>
+        android:text="cse"
+        android:padding="10dp"
+        android:background="@drawable/back"
+        android:shadowColor="@color/black"/>
 
         <Button
+            android:id="@+id/itevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="it"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"
-            />
+            android:text="IT"
+            android:padding="10dp"
+            android:background="@drawable/back"
+            android:shadowColor="@color/black"/>
         <Button
+            android:id="@+id/eceevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ece"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
+            android:text="EC"
+            android:padding="10dp"
+            android:background="@drawable/back"
+            android:shadowColor="@color/black"/>
         <Button
+            android:id="@+id/eeeevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="mech"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
-
+            android:text="EEE"
+            android:padding="10dp"
+            android:background="@drawable/back"
+            android:shadowColor="@color/black"/>
         <Button
+            android:id="@+id/meevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="geneneral"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
+            android:text="ME"
+            android:padding="10dp"
+            android:background="@drawable/back"
+            android:shadowColor="@color/black"/>
+        //Id "backtohome" is used to navigate to home
         <Button
+            android:id="@+id/backtohome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
             android:text="HOME"
-            android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
+            android:padding="10dp"
+            android:background="@drawable/back"
+            android:shadowColor="@color/black"/>
 
 
     </LinearLayout>

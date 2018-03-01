@@ -26,4 +26,5 @@ public class frag_menu extends Fragment {
         return inflater.inflate(R.layout.frag_menu,container, false);
     }
 
+
 }
