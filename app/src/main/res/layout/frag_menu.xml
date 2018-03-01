@@ -1,86 +1,117 @@
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/transparent"
     android:clickable="true">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="vertical">
+        //id "cseevents" used to represent cse event page
+        //Id "backtohome" is used to navigate to home
 
-        >
-    //id "cseevents" used to represent cse event page
-    <Button
-        android:id="@+id/cseevents"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="center"
-        android:text="cse"
-        android:padding="10dp"
-        android:background="@drawable/back"
-        android:shadowColor="@color/black"/>
+        <Button
+            android:id="@+id/backtohome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="440dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#FFFFFF"
+            android:shadowColor="@color/black"
+            android:text="HOME"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/generalevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/backtohome"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#FDAC40"
+            android:padding="10dp"
+            android:shadowColor="@color/black"
+            android:text="GENERAL" />
+
+        <Button
+            android:id="@+id/meevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/generalevents"
+            android:layout_alignBottom="@+id/generalevents"
+            android:layout_gravity="center"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toStartOf="@+id/generalevents"
+            android:background="@drawable/back"
+            android:backgroundTint="#FDAC40"
+            android:padding="10dp"
+            android:shadowColor="@color/black"
+            android:text="ME" />
+
+        <Button
+            android:id="@+id/cseevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/eeeevents"
+            android:layout_alignStart="@+id/eceevents"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#F17384"
+            android:padding="10dp"
+            android:shadowColor="@color/black"
+            android:text="cse" />
 
         <Button
             android:id="@+id/itevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignBaseline="@+id/cseevents"
+            android:layout_alignBottom="@+id/cseevents"
             android:layout_gravity="center"
-            android:text="IT"
-            android:padding="10dp"
+            android:layout_toEndOf="@+id/meevents"
             android:background="@drawable/back"
-            android:shadowColor="@color/black"/>
+            android:backgroundTint="#547AF6"
+            android:padding="10dp"
+            android:shadowColor="@color/black"
+            android:text="IT" />
+
         <Button
             android:id="@+id/eceevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/meevents"
+            android:layout_alignStart="@+id/meevents"
             android:layout_gravity="center"
-            android:text="EC"
-            android:padding="10dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/back"
-            android:shadowColor="@color/black"/>
+            android:backgroundTint="#33C1E3"
+            android:padding="10dp"
+            android:shadowColor="@color/black"
+            android:text="EC" />
+
         <Button
             android:id="@+id/eeeevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignBaseline="@+id/eceevents"
+            android:layout_alignBottom="@+id/eceevents"
+            android:layout_alignStart="@+id/itevents"
             android:layout_gravity="center"
-            android:text="EEE"
-            android:padding="10dp"
             android:background="@drawable/back"
-            android:shadowColor="@color/black"/>
-        <Button
-            android:id="@+id/meevents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="center"
-            android:text="ME"
+            android:backgroundTint="#7AC7CB"
             android:padding="10dp"
-            android:background="@drawable/back"
-            android:shadowColor="@color/black"/>
-        //Id "backtohome" is used to navigate to home
-        <Button
-            android:id="@+id/backtohome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="center"
-            android:text="HOME"
-            android:padding="10dp"
-            android:background="@drawable/back"
-            android:shadowColor="@color/black"/>
+            android:shadowColor="@color/black"
+            android:text="EEE" />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </FrameLayout>
