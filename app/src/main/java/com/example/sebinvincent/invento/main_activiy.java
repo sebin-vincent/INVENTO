@@ -365,6 +365,13 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
             return true;
         }
+        else if (id==R.id.reachus){
+
+            Intent intent=new Intent(main_activiy.this,MapsActivity.class);
+            startActivity(intent);
+            return true;
+
+        }
 
         return super.onOptionsItemSelected(item);
     }
