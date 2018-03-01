@@ -14,7 +14,15 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/notifications"
+        android:icon="@drawable/ic_stat_notifications"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        android:title="" />
+    <!--item
+        android:id="@+id/notifications"
         android:orderInCategory="100"
         android:title="Notifications"
-        app:showAsAction="never" />
+        app:showAsAction="never" /-->
+
+
 </menu>
