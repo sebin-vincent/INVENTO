@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#171A3B"
-    android:orientation="vertical">
-
-
+   >
     <LinearLayout
-        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/reminder">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -26,7 +27,7 @@
                 android:layout_marginEnd="13dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="14dp"
-                android:src="@drawable/cse_drawing" />
+                android:src="@drawable/loadings" />
 
             <TextView
                 android:id="@+id/venue"
@@ -42,9 +43,8 @@
                 android:id="@+id/venue_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/venue"
-                android:layout_alignRight="@+id/venue"
                 android:layout_below="@+id/venue"
+                android:padding="5dp"
                 android:text="drawing hall"
                 android:textColor="#ffffff" />
 
@@ -65,69 +65,87 @@
                 android:id="@+id/date_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/date"
                 android:layout_below="@+id/date"
+                android:padding="5dp"
                 android:text="30/05/2017"
                 android:textColor="#ffffff" />
 
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="3dp"
-                android:layout_below="@id/date_detail"
+                android:layout_marginTop="150dp"
                 android:background="#ffffff" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/even_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="HEADING"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-            android:textColor="#ffffff"
-            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/event_detail"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="its been a long time.i fed up with you.uyewgfu cd itsbf  fgyuec g cugerc ugrec gu   cugrgcru gurtg rgu ergurg  yrttg grueyc "
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <TextView
+                android:id="@+id/even_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/heading"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/even_name"
+                android:text="tjhcuuyc gv vvg gwrgwe  wg8wg8gwrvg8w g8v weg c8ew8 v 8v8sd8cg wcet7wf7c7c7fv77wb eww7ydsd d7d7c7c7w ds777v dvdvdv7sf7 v7wfd7vwd .cducds yvuydsv "
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:id="@+id/event_detail"
+                />
+
+
+            <TextView
+                android:id="@+id/reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/event_detail"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="70dp"
+                android:layout_marginStart="22dp"
+                android:background="@drawable/back"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="REMINDER"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/showingmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/event_detail"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="70dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/back"
+                android:gravity="center"
+                android:text="SHOW MORE"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        </ScrollView>
 
 
     </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/reminder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/showingmore"
-        android:layout_alignBottom="@+id/showingmore"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center"
-        android:background="@drawable/back"
-        android:gravity="center"
-        android:text="REMINDER"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="10dp"/>
-
-    <TextView
-        android:id="@+id/showingmore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="center"
-        android:layout_marginBottom="68dp"
-        android:layout_marginEnd="14dp"
-        android:background="@drawable/back"
-        android:gravity="center"
-        android:text="SHOW MORE"
-        android:textColor="#ffffff"
-        android:textStyle="bold" />
 
 
 

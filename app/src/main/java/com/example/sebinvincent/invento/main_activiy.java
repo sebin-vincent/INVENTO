@@ -1,7 +1,11 @@
 package com.example.sebinvincent.invento;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -9,6 +13,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,8 +23,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static java.lang.Thread.sleep;
+
 public class main_activiy extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
+    Point size;
 
     Button it,cs,eee,mech,ec,general;
     TextView textView;
@@ -71,21 +79,32 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         eee.setGravity(Gravity.CENTER | Gravity.BOTTOM);
         general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
 
+
+
+
+
+
         showmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (department){
+                switch (department) {
 
                     case "cse":
 
 
-                        Intent intent=new Intent(getApplicationContext(),acti_dprt_cse.class);
+
+                        Intent intent = new Intent(getApplicationContext(), acti_dprt_cse.class);
                         startActivity(intent);
+
+
+
 
                         break;
                     case "it":
 
-                         intent=new Intent(getApplicationContext(),acti_dprt_it.class);
+
+
+                        intent=new Intent(getApplicationContext(),acti_dprt_it.class);
                          startActivity(intent);
 
                         break;
@@ -376,6 +395,12 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

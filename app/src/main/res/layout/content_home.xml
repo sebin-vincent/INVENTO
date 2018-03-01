@@ -10,15 +10,6 @@
     tools:showIn="@layout/activity_home"
 
     >
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.anoop.buttonanimation.Home"
-    tools:showIn="@layout/activity_home"-->
 
 
     <LinearLayout
@@ -176,7 +167,8 @@
                 android:gravity="center"
                 android:text="SHOW MORE"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
 
         </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.sebinvincent.invento;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,6 +49,14 @@ public class acti_dprt_cse extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        occurance_time=0;
+        if(occurance_time==1){
+            occurance_time=0;
+        }
+        else{
+
+            Intent intent=new Intent(getApplicationContext(),main_activiy.class);
+            startActivity(intent);
+        }
+
     }
 }
