@@ -1,6 +1,7 @@
 package com.example.sebinvincent.invento;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -26,16 +27,17 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
 
-        department="cse";
 
-        it=findViewById(R.id.it);
-        cs=findViewById(R.id.cse);
-        eee=findViewById(R.id.eee);
-        ec=findViewById(R.id.ece);
-        mech=findViewById(R.id.mech);
-        general=findViewById(R.id.general);
-        textView=(TextView)findViewById(R.id.dprtmntname);
-        showmore=(TextView)findViewById(R.id.showmore);
+        department = "cse";
+
+        it = findViewById(R.id.it);
+        cs = findViewById(R.id.cse);
+        eee = findViewById(R.id.eee);
+        ec = findViewById(R.id.ece);
+        mech = findViewById(R.id.mech);
+        general = findViewById(R.id.general);
+        textView = (TextView) findViewById(R.id.dprtmntname);
+        showmore = (TextView) findViewById(R.id.showmore);
 
 
         it.setRotation(270);
@@ -63,58 +65,57 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         showmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch (department){
+                switch (department) {
 
                     case "cse":
 
 
-                        Intent intent=new Intent(getApplicationContext(),acti_dprt_cse.class);
+                        Intent intent = new Intent(getApplicationContext(), acti_dprt_cse.class);
                         startActivity(intent);
 
                         break;
                     case "it":
 
-                         intent=new Intent(getApplicationContext(),acti_dprt_it.class);
-                         startActivity(intent);
+                        intent = new Intent(getApplicationContext(), acti_dprt_it.class);
+                        startActivity(intent);
 
                         break;
 
                     case "mech":
-                        intent=new Intent(getApplicationContext(),acti_dprt_mech.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_mech.class);
                         startActivity(intent);
                         break;
 
                     case "ece":
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_ece.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_ece.class);
                         startActivity(intent);
                         break;
 
                     case "eee":
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_eee.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_eee.class);
                         startActivity(intent);
                         break;
                     case "general":
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_general.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_general.class);
                         startActivity(intent);
                         break;
                 }
             }
         });
-
-
-
-
-
     }
-    public void click(View view){
+
+
+
+
+    public void click(View view) {
 
         ViewGroup.LayoutParams params;
-        switch (view.getId()){
+        switch (view.getId()) {
 
-            case R.id.cse :
+            case R.id.cse:
                 department = "cse";
 
                 textView.setText("COMPUTER SCIENCE \nAND \nENGINEERING");
@@ -141,13 +142,13 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 eee.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
 
-                cs.setPadding(10,0,10,0);
+                cs.setPadding(10, 0, 10, 0);
 
                 break;
 
-            case R.id.it :
+            case R.id.it:
 
-                department="it";
+                department = "it";
 
                 textView.setText("INFORMATION\nTECHNOLOGY");
 
@@ -166,7 +167,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 general.setTranslationX(0);
 
 
-                it.setGravity(Gravity.CENTER |Gravity.RIGHT);
+                it.setGravity(Gravity.CENTER | Gravity.RIGHT);
                 cs.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 ec.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 mech.setGravity(Gravity.CENTER | Gravity.BOTTOM);
@@ -175,9 +176,9 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                 break;
 
-            case R.id.ece :
+            case R.id.ece:
 
-                department="ece";
+                department = "ece";
 
                 textView.setText("ELECTRONICS AND \nCOMMUNICATION \nENGINEERING");
 
@@ -197,7 +198,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 general.setTranslationX(0);
 
 
-                ec.setGravity(Gravity.CENTER |Gravity.RIGHT);
+                ec.setGravity(Gravity.CENTER | Gravity.RIGHT);
                 cs.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 it.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 mech.setGravity(Gravity.CENTER | Gravity.BOTTOM);
@@ -206,9 +207,9 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
 
                 break;
-            case R.id.mech :
+            case R.id.mech:
 
-                department="mech";
+                department = "mech";
 
                 textView.setText("MECHANICAL\nENGINEERING");
 
@@ -235,9 +236,9 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
 
                 break;
-            case R.id.eee :
+            case R.id.eee:
 
-                department="eee";
+                department = "eee";
                 textView.setText("ELECTRICAL AND \nELECTRONICS \nENGINEERING");
 
                 it.setRotation(270);
@@ -266,9 +267,9 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 break;
 
 
-            case R.id.general :
+            case R.id.general:
 
-                department="general";
+                department = "general";
 
                 textView.setText("GENERAL\nEVENTS");
 
@@ -298,6 +299,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 break;
         }
     }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
