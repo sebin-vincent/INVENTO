@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class acti_dprt_ece extends AppCompatActivity {
 
-    public int occurence_time=0;
+    public int occurence_time=0; // menu button
     TextView dprt_heading;
     ImageView menu;
 
