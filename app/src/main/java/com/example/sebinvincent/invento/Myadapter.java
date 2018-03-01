@@ -48,7 +48,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
 //        lisItem=listItems.get(position);
 
         holder.heading.setText(listItems.get(position).getHead());
-        holder.discription.setText(listItems.get(position).getDesc());
+
 
         Picasso.with(context).load(listItems.get(position).getImage_url()).into(holder.image);
 
