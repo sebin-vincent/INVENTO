@@ -18,11 +18,6 @@
         android:orderInCategory="1"
         app:showAsAction="always"
         android:title="" />
-    <!--item
-        android:id="@+id/notifications"
-        android:orderInCategory="100"
-        android:title="Notifications"
-        app:showAsAction="never" /-->
 
 
 </menu>
