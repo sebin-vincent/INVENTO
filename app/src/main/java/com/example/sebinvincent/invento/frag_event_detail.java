@@ -60,7 +60,7 @@ public class frag_event_detail extends Fragment {
         reminder=(TextView)view.findViewById(R.id.reminder);
         date_reset=(TextView)view.findViewById(R.id.date_detail);
         showmore=(TextView)view.findViewById(R.id.showingmore);
-        venue_reset=(TextView)view.findViewById(R.id.venue_detail);
+        venue_reset=(TextView)view.findViewById(R.id.prize_detail);
 
 
 
