@@ -46,6 +46,9 @@ public class acti_dprt_cse extends AppCompatActivity {
 
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        occurance_time=0;
+    }
 }

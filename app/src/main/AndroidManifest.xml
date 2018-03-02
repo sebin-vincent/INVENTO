@@ -31,6 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".acti_profile"/>
         <activity android:name=".main_activiy" />
         <activity android:name=".acti_dprt_cse" />
         <activity android:name=".acti_dprt_eee" />

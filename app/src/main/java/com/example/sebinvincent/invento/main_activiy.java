@@ -394,6 +394,13 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
         }
 
+        else if(id==R.id.profile){
+
+            Intent intent=new Intent(main_activiy.this,acti_profile.class);
+            startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 

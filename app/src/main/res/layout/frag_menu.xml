@@ -1,63 +1,121 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/transparent"
     android:clickable="true">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        >
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cse"
-        android:layout_gravity="center"
-        android:padding="5dp"
-        android:shadowColor="@color/transparent"/>
 
         <Button
+            android:id="@+id/backtohome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="it"
-            android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ece"
-            android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="mech"
-            android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="geneneral"
-            android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_below="@+id/meevents"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#FFFFFF"
+            android:shadowColor="@color/background"
             android:text="HOME"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/generalevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/meevents"
+            android:layout_alignBottom="@+id/meevents"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:padding="5dp"
-            android:shadowColor="@color/transparent"/>
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#FDAC40"
+            android:padding="10dp"
+            android:shadowColor="@color/background"
+            android:text="GENERAL" />
+
+        <Button
+            android:id="@+id/meevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eceevents"
+            android:layout_gravity="center"
+            android:layout_marginEnd="38dp"
+            android:layout_marginTop="22dp"
+            android:layout_toStartOf="@+id/generalevents"
+            android:background="@drawable/back"
+            android:backgroundTint="#FDAC40"
+            android:padding="10dp"
+            android:shadowColor="@color/background"
+            android:text="ME" />
+
+        <Button
+            android:id="@+id/cseevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/eceevents"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#F17384"
+            android:padding="10dp"
+            android:shadowColor="@color/background"
+            android:text="cse" />
+
+        <Button
+            android:id="@+id/itevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cseevents"
+            android:layout_alignBottom="@+id/cseevents"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/meevents"
+            android:background="@drawable/back"
+            android:backgroundTint="#547AF6"
+            android:padding="10dp"
+            android:shadowColor="@color/background"
+            android:text="IT" />
+
+        <Button
+            android:id="@+id/eceevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/meevents"
+            android:layout_below="@+id/cseevents"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#33C1E3"
+            android:padding="10dp"
+            android:shadowColor="@color/background"
+            android:text="EC" />
+
+        <Button
+            android:id="@+id/eeeevents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/eceevents"
+            android:layout_alignBottom="@+id/eceevents"
+            android:layout_alignStart="@+id/itevents"
+            android:layout_gravity="center"
+            android:background="@drawable/back"
+            android:backgroundTint="#7AC7CB"
+            android:padding="10dp"
+            android:shadowColor="@color/background"
+            android:text="EEE" />
 
 
-    </LinearLayout>
 
-</FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+        
