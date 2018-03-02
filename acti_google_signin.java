@@ -61,7 +61,7 @@ public class acti_google_signin extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() != null ){
-                    startActivity(new Intent(acti_google_signin.this, main_activiy.class));
+                    startActivity(new Intent(acti_google_signin.this, main_activiy.class));// comment
                 }
             }
         };
