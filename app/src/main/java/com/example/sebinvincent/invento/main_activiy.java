@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -23,7 +24,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static java.lang.Thread.sleep;
 
@@ -37,6 +40,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
     String department;
     private int count = 0;
     //new comment
+
+    ImageView deptIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         general=findViewById(R.id.general);
         textView=(TextView)findViewById(R.id.dprtmntname);
         showmore=(TextView)findViewById(R.id.showmore);
+        deptIcon=(ImageView)findViewById(R.id.imageView2);
 
 
         it.setRotation(270);
@@ -81,20 +87,20 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         eee.setGravity(Gravity.CENTER | Gravity.BOTTOM);
         general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
 
-
-
-
+        deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
 
 
         showmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 switch (department) {
 
                     case "cse":
 
 
-
+                        Toast.makeText(main_activiy.this,"Welcome to Computer Science",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), acti_dprt_cse.class);
                         startActivity(intent);
 
@@ -104,7 +110,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                         break;
                     case "it":
 
-
+                        Toast.makeText(main_activiy.this,"Welcome to Information Technology",Toast.LENGTH_LONG).show();
 
                         intent=new Intent(getApplicationContext(),acti_dprt_it.class);
                          startActivity(intent);
@@ -112,11 +118,17 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                         break;
 
                     case "mech":
+
+                        Toast.makeText(main_activiy.this,"Welcome to Mechanical Department",Toast.LENGTH_LONG).show();
+
                         intent=new Intent(getApplicationContext(),acti_dprt_mech.class);
                         startActivity(intent);
                         break;
 
                     case "ece":
+
+                        Toast.makeText(main_activiy.this,"Welcome to Electronics Department",Toast.LENGTH_LONG).show();
+
 
                         intent=new Intent(getApplicationContext(),acti_dprt_ece.class);
                         startActivity(intent);
@@ -124,10 +136,16 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                     case "eee":
 
+                        Toast.makeText(main_activiy.this,"Welcome to Electrical Department",Toast.LENGTH_LONG).show();
+
+
                         intent=new Intent(getApplicationContext(),acti_dprt_eee.class);
                         startActivity(intent);
                         break;
                     case "general":
+
+                        Toast.makeText(main_activiy.this,"Welcome to General Programmes",Toast.LENGTH_LONG).show();
+
 
                         intent=new Intent(getApplicationContext(),acti_dprt_general.class);
                         startActivity(intent);
@@ -150,6 +168,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department = "cse";
 
                 textView.setText("COMPUTER SCIENCE \nAND \nENGINEERING");
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
 
                 it.setRotation(270);
                 eee.setRotation(270);
@@ -182,6 +201,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department="it";
 
                 textView.setText("INFORMATION\nTECHNOLOGY");
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+
 
                 it.setRotation(0);
                 cs.setRotation(270);
@@ -212,6 +233,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department="ece";
 
                 textView.setText("ELECTRONICS AND \nCOMMUNICATION \nENGINEERING");
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+
 
                 it.setRotation(270);
                 cs.setRotation(270);
@@ -243,6 +266,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department="mech";
 
                 textView.setText("MECHANICAL\nENGINEERING");
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+
 
                 it.setRotation(270);
                 cs.setRotation(270);
@@ -271,6 +296,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                 department="eee";
                 textView.setText("ELECTRICAL AND \nELECTRONICS \nENGINEERING");
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+
 
                 it.setRotation(270);
                 cs.setRotation(270);
@@ -303,6 +330,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department="general";
 
                 textView.setText("GENERAL\nEVENTS");
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+
 
 
                 it.setRotation(270);

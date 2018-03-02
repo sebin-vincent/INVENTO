@@ -144,7 +144,8 @@
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:padding="20dp"
-                android:src="@drawable/cse_drawing" />
+                 />
+            <!--android:src="@drawable/cse_drawing"-->
 
             <TextView
                 android:id="@+id/dprtmntname"
