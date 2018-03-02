@@ -30,7 +30,6 @@ public class frag_it_events extends Fragment {
         view=inflater.inflate(R.layout.frag_it_events, container, false);
 
         competitions=(ImageView)view.findViewById(R.id.it_comp);
-        workshops=(ImageView)view.findViewById(R.id.it_wrkshp);
         talks=(ImageView)view.findViewById(R.id.it_talksndshow);
 
         competitions.setOnClickListener(new View.OnClickListener() {
@@ -44,18 +43,6 @@ public class frag_it_events extends Fragment {
             }
         });
 
-
-        workshops.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                frag_it_work_list itwork =new frag_it_work_list();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,itwork,itwork.getTag()).addToBackStack("").commit();
-
-
-            }
-        });
 
         talks.setOnClickListener(new View.OnClickListener() {
             @Override

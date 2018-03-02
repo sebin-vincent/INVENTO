@@ -35,7 +35,7 @@ import java.util.List;
  */
 public class frag_general_comp_list extends Fragment {
 
-    private static final String url_data="https://simplifiedcoding.net/demos/marvel";
+    private static final String url_data="https://inventogec.org/api/v1/events/gen/?format=json";
 
     private RecyclerView recyclerView;
     private Myadapter adapter;
@@ -91,8 +91,8 @@ public class frag_general_comp_list extends Fragment {
 
                     for (int i=0;i<array.length();i++){
                         JSONObject o= array.getJSONObject(i);
-                        card_view listitem=new card_view(o.getString("name"),
-                                o.getString("bio"),o.getString("imageurl"));
+                        card_view listitem=new card_view(o.getString("title"),
+                                o.getString("description"),o.getString("imageurl"));
                         listItems.add(listitem);
 
 

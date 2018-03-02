@@ -32,7 +32,6 @@ public class frag_ece_events extends Fragment {
 
         view=inflater.inflate(R.layout.frag_ece_events, container, false);
         competitions =(ImageView)view.findViewById(R.id.ececomp);
-        workshops = (ImageView)view.findViewById(R.id.ece_wrkshp);
         talks = (ImageView)view.findViewById(R.id.ece_talksndshow);
 
 
@@ -46,15 +45,6 @@ public class frag_ece_events extends Fragment {
             }
         });
 
-        workshops.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                frag_ece_work_list ecework =new frag_ece_work_list();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,ecework,ecework.getTag()).addToBackStack("").commit();
-
-            }
-        });
 
         talks.setOnClickListener(new View.OnClickListener() {
             @Override
