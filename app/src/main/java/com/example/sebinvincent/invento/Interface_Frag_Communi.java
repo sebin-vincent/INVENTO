@@ -6,7 +6,7 @@ package com.example.sebinvincent.invento;
 
 public interface Interface_Frag_Communi {
 
-    void respond(String header, String discrptr, String photo,String venue,String date,String time);
+    void respond(String header, String discrptr, String photo,int prize,int day,int pk,String time);
 
 
 }

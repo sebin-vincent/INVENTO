@@ -35,7 +35,7 @@ import java.util.List;
 
 public class frag_cse_comp_list extends Fragment {
 
-    private static final String url_data="https://simplifiedcoding.net/demos/marvel";
+    private static final String url_data="https://inventogec.org/api/v1/events/cse/com/?format=json";
 
     private RecyclerView recyclerView;
     private Myadapter adapter;
@@ -76,17 +76,6 @@ public class frag_cse_comp_list extends Fragment {
         return view;
     }
 
-    protected boolean isNetworkConnected() {
-        try {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
-            return (mNetworkInfo == null) ? false : true;
-
-        }catch (NullPointerException e){
-            return false;
-
-        }
-    }
 
     private  void loadRecyclerviewData(){
 
@@ -94,111 +83,68 @@ public class frag_cse_comp_list extends Fragment {
         progressDialog.setMessage("Loading data....");
         progressDialog.show();
 
-        if(!isNetworkConnected()){
+        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url_data, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                progressDialog.dismiss();
 
-            cse_data_array array= new cse_data_array();
-
-            int l=array.getLength();
-            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
-            progressDialog.dismiss();
-
-
-            for (int i=0;i<l;i++){
+                try {
 
 
-                card_view listitem=new card_view(array.getNmaes(i),
-                        array.getProgram(i),uri.toString());
-                listItems.add(listitem);
+
+                    JSONArray array=new JSONArray(response);
+
+                    for (int i=0;i<array.length();i++){
+                        JSONObject o= array.getJSONObject(i);
+                        card_view listitem=new card_view(o.getString("title"),
+                                o.getString("description"),o.getString("imageurl"),o.getInt("prize"),o.getInt("day"),
+                                o.getInt("pk"));
+                        listItems.add(listitem);
+
+
+                    }
+
+                    adapter=new Myadapter(listItems,getContext(),communication);
+                    recyclerView.setAdapter(adapter);
+
+                }catch (JSONException e){
+                    e.printStackTrace();
+                }
 
 
             }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
 
-            adapter=new Myadapter(listItems,getActivity(),communication);
-            recyclerView.setAdapter(adapter);
+                        progressDialog.dismiss();
+                        Log.d(getTag(),error.getMessage());
+                        Toast.makeText(getContext(),error.getMessage(),Toast.LENGTH_LONG).show();
 
-        }
-        else {
-            final StringRequest stringRequest = new StringRequest(Request.Method.GET, url_data, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    progressDialog.dismiss();
-
-                    try {
-
-
-                        JSONArray array = new JSONArray(response);
-
-                        for (int i = 0; i < array.length(); i++) {
-                            JSONObject o = array.getJSONObject(i);
-                            card_view listitem = new card_view(o.getString("name"),
-                                    o.getString("bio"), o.getString("imageurl"));
-                            listItems.add(listitem);
-
-
-                        }
-
-                        adapter = new Myadapter(listItems, getContext(), communication);
-                        recyclerView.setAdapter(adapter);
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
                     }
-
-
                 }
-            },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
+        );
 
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(stringRequest);
 
-
-                            progressDialog.dismiss();
-
-                            cse_data_array array= new cse_data_array();
-
-                            int l=array.getLength();
-                            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
-                            progressDialog.dismiss();
-
-
-                            for (int i=0;i<l;i++){
-
-
-                                card_view listitem=new card_view(array.getNmaes(i),
-                                        array.getProgram(i),uri.toString());
-                                listItems.add(listitem);
-
-
-                            }
-
-                            adapter=new Myadapter(listItems,getActivity(),communication);
-                            recyclerView.setAdapter(adapter);
-
-
-                            Log.d(getTag(), error.getMessage());
-                            //Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_LONG).show();
-
-                        }
-                    }
-            );
-
-            RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-            requestQueue.add(stringRequest);
-        }
 
     }
 
+
+
     Interface_Frag_Communi communication=new Interface_Frag_Communi() {
         @Override
-        public void respond(String header,String discrptr,String photo,String venue,String date,String time) {
+        public void respond(String header,String discrptr,String photo,int prize,int day,int pk,String time) {
             frag_event_detail fragmentB=new frag_event_detail();
             Bundle bundle=new Bundle();
             bundle.putString("NAME",header);
             bundle.putString("DETAIL",discrptr);
             bundle.putString("IMAGE",photo);
-            bundle.putString("VENUE",venue);
-            bundle.putString("DATE",date);
+            bundle.putInt("PRIZE",prize);
+            bundle.putInt("DATE",day);
+            bundle.putInt("PK",pk);
             bundle.putString("TIME",time);
             fragmentB.setArguments(bundle);
             FragmentManager manager=getFragmentManager();

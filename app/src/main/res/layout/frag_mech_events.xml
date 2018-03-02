@@ -19,19 +19,6 @@
 
 
 
-    <ImageView
-        android:padding="20dp"
-        android:id="@+id/mech_talksndshow"
-        android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:src="@drawable/talks"
-        android:background="#171A3B"
-        android:elevation="3dp"
-
-        />
-
-
 
 
 

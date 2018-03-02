@@ -32,7 +32,6 @@ public class frag_mech_events extends Fragment {
 
         competitions =(ImageView)view.findViewById(R.id.mech_comp);
 
-        talks = (ImageView)view.findViewById(R.id.mech_talksndshow);
 
 
         competitions.setOnClickListener(new View.OnClickListener() {
@@ -45,15 +44,6 @@ public class frag_mech_events extends Fragment {
             }
         });
 
-        talks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                frag_mech_talk_list mechtalk =new frag_mech_talk_list();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,mechtalk,mechtalk.getTag()).addToBackStack("").commit();
-
-            }
-        });
 
 
         return view;

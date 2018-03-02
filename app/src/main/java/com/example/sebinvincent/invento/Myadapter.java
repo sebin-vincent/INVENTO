@@ -57,8 +57,9 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
         bundle.putString("NAME",listItems.get(position).getHead());
         bundle.putString("DETAIL",listItems.get(position).getDesc());
         bundle.putString("IMAGE",listItems.get(position).getImage_url());
-        bundle.putString("VENUE","college");
-        bundle.putString("DATE","30/05/2018");
+        bundle.putInt("PRIZE",listItems.get(position).getPrize());
+        bundle.putInt("DATE",listItems.get(position).getDay());
+        bundle.putInt("PK",listItems.get(position).getPk());
         bundle.putString("TIME","09:00to12:00");
 
         fragmentB.setArguments(bundle);
@@ -68,7 +69,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
             public void onClick(View view) {
 
                 mCommunicator.respond(listItems.get(position).getHead(),listItems.get(position).getDesc(),listItems.get(position).getImage_url()
-                ,"college","30/05/2017","09:00to12:00");
+                ,listItems.get(position).getPrize(),listItems.get(position).getDay(),listItems.get(position).getPk(),"09:00to12:00");
 
                 
             }

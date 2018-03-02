@@ -92,7 +92,8 @@ public class frag_general_comp_list extends Fragment {
                     for (int i=0;i<array.length();i++){
                         JSONObject o= array.getJSONObject(i);
                         card_view listitem=new card_view(o.getString("title"),
-                                o.getString("description"),o.getString("imageurl"));
+                                o.getString("description"),o.getString("imageurl"),o.getInt("prize"),o.getInt("day"),
+                                o.getInt("pk"));
                         listItems.add(listitem);
 
 
@@ -128,14 +129,15 @@ public class frag_general_comp_list extends Fragment {
 
     Interface_Frag_Communi communication=new Interface_Frag_Communi() {
         @Override
-        public void respond(String header,String discrptr,String photo,String venue,String date,String time) {
+        public void respond(String header,String discrptr,String photo,int prize,int day,int pk,String time) {
             frag_event_detail fragmentB=new frag_event_detail();
             Bundle bundle=new Bundle();
             bundle.putString("NAME",header);
             bundle.putString("DETAIL",discrptr);
             bundle.putString("IMAGE",photo);
-            bundle.putString("VENUE",venue);
-            bundle.putString("DATE",date);
+            bundle.putInt("PRIZE",prize);
+            bundle.putInt("DATE",day);
+            bundle.putInt("PK",pk);
             bundle.putString("TIME",time);
             fragmentB.setArguments(bundle);
             FragmentManager manager=getFragmentManager();

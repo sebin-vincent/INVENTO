@@ -27,7 +27,7 @@ import java.util.Calendar;
 public class frag_event_detail extends Fragment {
 
     TextView eventname;
-    TextView venue_reset;
+    TextView prize_reset;
     TextView date_reset;
     TextView time_reset;
     TextView eventdet;
@@ -39,9 +39,14 @@ public class frag_event_detail extends Fragment {
     String imager;
     String eventdetail;
     public String event_name;
-    public String date;
+    public String dates;
     public String time;
-    public  String venue;
+    public String prizemoney;
+    public String weburl;
+
+    public  int prize;
+    public int date;
+    public int pk;
 
 
     public frag_event_detail() {
@@ -60,14 +65,14 @@ public class frag_event_detail extends Fragment {
         reminder=(TextView)view.findViewById(R.id.reminder);
         date_reset=(TextView)view.findViewById(R.id.date_detail);
         showmore=(TextView)view.findViewById(R.id.showingmore);
-        venue_reset=(TextView)view.findViewById(R.id.prize_detail);
+        prize_reset=(TextView)view.findViewById(R.id.prize_detail);
 
 
 
         eventname.setText(event_name);
         eventdet.setText(eventdetail);
-        date_reset.setText(date);
-        venue_reset.setText(venue);
+        date_reset.setText(dates);
+        prize_reset.setText(prizemoney);
 
         ImageRequest imageRequest=new ImageRequest(imager, new Response.Listener<Bitmap>() {
             @Override
@@ -77,7 +82,7 @@ public class frag_event_detail extends Fragment {
         }, 0, 0, ImageView.ScaleType.CENTER_CROP, null, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getActivity(),"something went wrong....",Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(),"switch on network....",Toast.LENGTH_LONG).show();
                 error.printStackTrace();                       }
         });
         Mysingleton.getMinstance(getActivity()).addToRequestQue(imageRequest);
@@ -101,9 +106,9 @@ public class frag_event_detail extends Fragment {
                 int endMinutes = Integer.valueOf(endTime.split(":")[1]);
 
 
-                int year = Integer.valueOf(date.split("/")[2]);
-                int month = Integer.valueOf(date.split("/")[1]) - 1;
-                int day = Integer.valueOf(date.split("/")[0].split("\\+")[0]);
+                int year = Integer.valueOf(dates.split("/")[2]);
+                int month = Integer.valueOf(dates.split("/")[1]) - 1;
+                int day = Integer.valueOf(dates.split("/")[0].split("\\+")[0]);
 
                 Calendar cal = Calendar.getInstance();
                 cal.set(year, month, day, beginHours, beginMinutes);
@@ -136,8 +141,25 @@ public class frag_event_detail extends Fragment {
         eventdetail=getArguments().getString("DETAIL");
         imager=getArguments().getString("IMAGE");
         time=getArguments().getString("TIME");
-        date=getArguments().getString("DATE");
-        venue=getArguments().getString("VENUE");
+        date=getArguments().getInt("DATE");
+        prize=getArguments().getInt("PRIZE");
+        pk=getArguments().getInt("PK");
+
+        switch (date){
+
+            case 1: dates="16/03/2018";
+                    break;
+
+            case 2: dates="17/03/2018";
+                    break;
+            case 3: dates="18/03/2018";
+
+        }
+
+        prizemoney="Rs"+Integer.toString(prize);
+
+        weburl=Integer.toString(pk);
+
 
     }
 
