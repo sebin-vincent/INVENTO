@@ -11,6 +11,7 @@ public class cse_data_array {
 
     public List<String> programs=new ArrayList<>();
     public List<String> names=new ArrayList<>();
+    public List<String> prize=new ArrayList<>();
 
 
     public cse_data_array() {

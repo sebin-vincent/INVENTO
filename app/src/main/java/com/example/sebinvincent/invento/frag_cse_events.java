@@ -34,7 +34,6 @@ public class frag_cse_events extends Fragment {
         view=inflater.inflate(R.layout.frag_cse_events, container, false);
 
         competitions=(ImageView)view.findViewById(R.id.cse_comp);
-        workshops=(ImageView)view.findViewById(R.id.cse_wrkshp);
         talks=(ImageView)view.findViewById(R.id.cse_talksndshow);
 
         competitions.setOnClickListener(new View.OnClickListener() {
@@ -48,18 +47,6 @@ public class frag_cse_events extends Fragment {
             }
         });
 
-
-        workshops.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                frag_cse_work_list csework =new frag_cse_work_list();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,csework,csework.getTag()).addToBackStack("").commit();
-
-
-            }
-        });
 
         talks.setOnClickListener(new View.OnClickListener() {
             @Override

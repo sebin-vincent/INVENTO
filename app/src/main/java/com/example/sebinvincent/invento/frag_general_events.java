@@ -17,8 +17,7 @@ import android.widget.Toast;
 public class frag_general_events extends Fragment {
 
     ImageView competitions;
-    ImageView talks;
-    ImageView workshops;
+
 
 
     public frag_general_events() {
@@ -34,7 +33,6 @@ public class frag_general_events extends Fragment {
         view=inflater.inflate(R.layout.frag_general_events, container, false);
 
         competitions=(ImageView)view.findViewById(R.id.general_comp);
-        talks=(ImageView)view.findViewById(R.id.general_talksndshow);
 
 
         competitions.setOnClickListener(new View.OnClickListener() {
@@ -46,17 +44,6 @@ public class frag_general_events extends Fragment {
                 manager.beginTransaction().replace(R.id.Container,generalcomp,generalcomp.getTag()).addToBackStack("").commit();
 
 
-
-
-            }
-        });
-        talks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                frag_general_talk_list generaltalk =new frag_general_talk_list();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,generaltalk,generaltalk.getTag()).addToBackStack("").commit();
 
 
             }

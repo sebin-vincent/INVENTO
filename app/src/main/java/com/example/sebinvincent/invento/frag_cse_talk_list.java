@@ -42,7 +42,6 @@ public class frag_cse_talk_list extends Fragment {
     private List<card_view> listItems;
 
 
-
     public frag_cse_talk_list() {
         // Required empty public constructor
     }
@@ -53,7 +52,7 @@ public class frag_cse_talk_list extends Fragment {
                              Bundle savedInstanceState) {
 
         View view;
-        view=inflater.inflate(R.layout.frag_cse_work_list, container, false);
+        view=inflater.inflate(R.layout.frag_cse_talk_list, container, false);
 
         recyclerView=(RecyclerView)view.findViewById(R.id.recyclerview);
 

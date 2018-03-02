@@ -31,7 +31,7 @@ public class frag_mech_events extends Fragment {
         view=inflater.inflate(R.layout.frag_mech_events, container, false);
 
         competitions =(ImageView)view.findViewById(R.id.mech_comp);
-        workshops = (ImageView)view.findViewById(R.id.mech_wrkshp);
+
         talks = (ImageView)view.findViewById(R.id.mech_talksndshow);
 
 
@@ -41,16 +41,6 @@ public class frag_mech_events extends Fragment {
                 frag_mech_comp_list mechComp =new frag_mech_comp_list();
                 FragmentManager manager=getFragmentManager();
                 manager.beginTransaction().replace(R.id.Container,mechComp,mechComp.getTag()).addToBackStack("").commit();
-
-            }
-        });
-
-        workshops.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                frag_mech_work_list mechwork =new frag_mech_work_list();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,mechwork,mechwork.getTag()).addToBackStack("").commit();
 
             }
         });

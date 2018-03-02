@@ -33,7 +33,6 @@ public class frag_eee_events extends Fragment {
 
 
         competitions=(ImageView)view.findViewById(R.id.eee_comp);
-        workshops=(ImageView)view.findViewById(R.id.eee_wrkshp);
         talks=(ImageView)view.findViewById(R.id.eee_talksndshow);
 
         competitions.setOnClickListener(new View.OnClickListener() {
@@ -43,18 +42,6 @@ public class frag_eee_events extends Fragment {
                 frag_eee_comp_list eeeComp =new frag_eee_comp_list();
                 FragmentManager manager=getFragmentManager();
                 manager.beginTransaction().replace(R.id.Container,eeeComp,eeeComp.getTag()).addToBackStack("").commit();
-
-            }
-        });
-
-        workshops.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                frag_eee_work_list eeework =new frag_eee_work_list();
-                FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,eeework,eeework.getTag()).addToBackStack("").commit();
-
 
             }
         });

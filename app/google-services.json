@@ -15,12 +15,24 @@
       },
       "oauth_client": [
         {
-          "client_id": "983103388367-df1em9aod0ifue53oe7ipvuormg5fb9c.apps.googleusercontent.com",
+          "client_id": "983103388367-k9rvs55udm7u4nk1g0k4dnmnv5lrab7j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sebinvincent.invento",
+            "certificate_hash": "541868fecd4a5a37d98134637e33bac5bfeb1d2e"
+          }
+        },
+        {
+          "client_id": "983103388367-as6h2uasmqigbuoc8gs9bsu7trufujq8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.sebinvincent.invento",
             "certificate_hash": "f954c86a5856fa50f5815e1739b3b06883e55f56"
           }
+        },
+        {
+          "client_id": "983103388367-9e0b0o9s7ufof1eaako661q5her78r9u.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "983103388367-s2q3f8bqtsvm9otjp7cmbss8s344i8p5.apps.googleusercontent.com",
@@ -40,7 +52,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "983103388367-s2q3f8bqtsvm9otjp7cmbss8s344i8p5.apps.googleusercontent.com",
+              "client_id": "983103388367-9e0b0o9s7ufof1eaako661q5her78r9u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

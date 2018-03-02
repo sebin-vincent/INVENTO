@@ -46,17 +46,6 @@ public class acti_dprt_cse extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        if(occurance_time==1){
-            occurance_time=0;
-        }
-        else{
 
-            Intent intent=new Intent(getApplicationContext(),main_activiy.class);
-            startActivity(intent);
-        }
 
-    }
 }
