@@ -1,7 +1,11 @@
 package com.example.sebinvincent.invento;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -86,10 +90,32 @@ public class acti_google_signin extends AppCompatActivity {
     }
 
 
+
+
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
+
+
+
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("INVENTO")
+                .setMessage("കൊറച്ചു കഴിഞ്ഞ് പോവാം ഗഡി ?")
+                .setNegativeButton("എന്നാ ശെരി ..", null)
+                .setPositiveButton("പിന്നെ വരാം bro", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        startActivity(intent);
+                    }
+                }).create().show();
+
+    }
+
 
 
 
@@ -103,6 +129,9 @@ public class acti_google_signin extends AppCompatActivity {
             if (result.isSuccess()){
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = result.getSignInAccount();
+                ProgressDialog dialog = new ProgressDialog(acti_google_signin.this);
+                dialog.setMessage("Logging in....");
+                dialog.show();
                 firebaseAuthWithGoogle(account);
             } else{
                 Toast.makeText(acti_google_signin.this,"Authentication went wrong", Toast.LENGTH_SHORT).show();
