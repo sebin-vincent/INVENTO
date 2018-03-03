@@ -30,11 +30,11 @@ import android.widget.Toast;
 
 import static java.lang.Thread.sleep;
 
-public class main_activiy extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class main_activiy extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Point size;
 
-    Button it,cs,eee,mech,ec,general;
+    Button it, cs, eee, mech, ec, general;
     TextView textView;
     TextView showmore;
     String department;
@@ -51,18 +51,17 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
 
+        department = "cse";
 
-        department="cse";
-
-        it=findViewById(R.id.it);
-        cs=findViewById(R.id.cse);
-        eee=findViewById(R.id.eee);
-        ec=findViewById(R.id.ece);
-        mech=findViewById(R.id.mech);
-        general=findViewById(R.id.general);
-        textView=(TextView)findViewById(R.id.dprtmntname);
-        showmore=(TextView)findViewById(R.id.showmore);
-        deptIcon=(ImageView)findViewById(R.id.imageView2);
+        it = findViewById(R.id.it);
+        cs = findViewById(R.id.cse);
+        eee = findViewById(R.id.eee);
+        ec = findViewById(R.id.ece);
+        mech = findViewById(R.id.mech);
+        general = findViewById(R.id.general);
+        textView = (TextView) findViewById(R.id.dprtmntname);
+        showmore = (TextView) findViewById(R.id.showmore);
+        deptIcon = (ImageView) findViewById(R.id.imageView2);
 
 
         it.setRotation(270);
@@ -100,54 +99,52 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                     case "cse":
 
 
-                        Toast.makeText(main_activiy.this,"Welcome to Cse Virus",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this, "Welcome to Cse Virus", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), acti_dprt_cse.class);
                         startActivity(intent);
-
-
 
 
                         break;
                     case "it":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Itianz",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this, "Welcome to Itianz", Toast.LENGTH_LONG).show();
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_it.class);
-                         startActivity(intent);
+                        intent = new Intent(getApplicationContext(), acti_dprt_it.class);
+                        startActivity(intent);
 
                         break;
 
                     case "mech":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Royal Mech",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this, "Welcome to Royal Mech", Toast.LENGTH_LONG).show();
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_mech.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_mech.class);
                         startActivity(intent);
                         break;
 
                     case "ece":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Terror Ec",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this, "Welcome to Terror Ec", Toast.LENGTH_LONG).show();
 
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_ece.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_ece.class);
                         startActivity(intent);
                         break;
 
                     case "eee":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Power Eee",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this, "Welcome to Power Eee", Toast.LENGTH_LONG).show();
 
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_eee.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_eee.class);
                         startActivity(intent);
                         break;
                     case "general":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Generals",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this, "Welcome to Generals", Toast.LENGTH_LONG).show();
 
 
-                        intent=new Intent(getApplicationContext(),acti_dprt_general.class);
+                        intent = new Intent(getApplicationContext(), acti_dprt_general.class);
                         startActivity(intent);
                         break;
                 }
@@ -155,17 +152,15 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         });
 
 
-
-
-
     }
-    public void click(View view){
+
+    public void click(View view) {
 
         ViewGroup.LayoutParams params;
 
-        switch (view.getId()){
+        switch (view.getId()) {
 
-            case R.id.cse :
+            case R.id.cse:
                 department = "cse";
 
                 textView.setText("COMPUTER SCIENCE \nAND \nENGINEERING");
@@ -193,13 +188,13 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 eee.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
 
-                cs.setPadding(10,0,10,0);
+                cs.setPadding(10, 0, 10, 0);
 
                 break;
 
-            case R.id.it :
+            case R.id.it:
 
-                department="it";
+                department = "it";
 
                 textView.setText("INFORMATION\nTECHNOLOGY");
                 deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/it_app"));
@@ -220,7 +215,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 general.setTranslationX(0);
 
 
-                it.setGravity(Gravity.CENTER |Gravity.RIGHT);
+                it.setGravity(Gravity.CENTER | Gravity.RIGHT);
                 cs.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 ec.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 mech.setGravity(Gravity.CENTER | Gravity.BOTTOM);
@@ -229,9 +224,9 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                 break;
 
-            case R.id.ece :
+            case R.id.ece:
 
-                department="ece";
+                department = "ece";
 
                 textView.setText("ELECTRONICS AND \nCOMMUNICATION \nENGINEERING");
                 deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/ece_app"));
@@ -253,7 +248,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 general.setTranslationX(0);
 
 
-                ec.setGravity(Gravity.CENTER |Gravity.RIGHT);
+                ec.setGravity(Gravity.CENTER | Gravity.RIGHT);
                 cs.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 it.setGravity(Gravity.CENTER | Gravity.BOTTOM);
                 mech.setGravity(Gravity.CENTER | Gravity.BOTTOM);
@@ -262,9 +257,9 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
 
                 break;
-            case R.id.mech :
+            case R.id.mech:
 
-                department="mech";
+                department = "mech";
 
                 textView.setText("MECHANICAL\nENGINEERING");
                 deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/mech_app"));
@@ -293,9 +288,9 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
 
                 break;
-            case R.id.eee :
+            case R.id.eee:
 
-                department="eee";
+                department = "eee";
                 textView.setText("ELECTRICAL AND \nELECTRONICS \nENGINEERING");
                 deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/eee_app"));
 
@@ -326,13 +321,12 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 break;
 
 
-            case R.id.general :
+            case R.id.general:
 
-                department="general";
+                department = "general";
 
                 textView.setText("GENERAL\nEVENTS");
                 deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
-
 
 
                 it.setRotation(270);
@@ -370,6 +364,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         menuItem.setIcon(buildCounterDrawable(count, R.drawable.ic_stat_notifications));
         return true;
     }
+
     private Drawable buildCounterDrawable(int count, int backgroundImageId) {
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.counter_menuitem_layout, null);
@@ -406,67 +401,70 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_about) {
 
-            Intent intent =new Intent(main_activiy.this,AboutUS.class);
+            Intent intent = new Intent(main_activiy.this, AboutUS.class);
             startActivity(intent);
             return true;
         }
         else if (id == R.id.notifications) {
 
-            Intent intent =new Intent(main_activiy.this,Notification.class);
+            Intent intent = new Intent(main_activiy.this, Notification.class);
             startActivity(intent);
             return true;
         }
-        else if (id==R.id.reachus){
+        else if (id == R.id.reachus) {
 
-            Intent intent=new Intent(main_activiy.this,MapsActivity.class);
-            startActivity(intent);
-            return true;
-
-        }
-
-        else if(id==R.id.profile){
-
-            Intent intent=new Intent(main_activiy.this,acti_profile.class);
-            startActivity(intent);
-            return true;
-        }
-
-
-        else if (id==R.id.developers){
-
-            startActivity(new Intent(main_activiy.this,acti_developers.class));
-            return  true;
-
-        else if(id==R.id.coordinators){
-
-            Intent intent=new Intent(main_activiy.this,acti_coordinators.class);
+            Intent intent = new Intent(main_activiy.this, MapsActivity.class);
             startActivity(intent);
             return true;
 
         }
+        else if (id == R.id.profile) {
 
-        return super.onOptionsItemSelected(item);
+            Intent intent = new Intent(main_activiy.this, acti_profile.class);
+            startActivity(intent);
+            return true;
+        }
+        else if (id == R.id.developers)
+        {
+
+            startActivity(new Intent(main_activiy.this, acti_developers.class));
+            return true;
+        }
+
+        else if (id == R.id.coordinators)
+        {
+
+                Intent intent = new Intent(main_activiy.this, acti_coordinators.class);
+                startActivity(intent);
+                return true;
+
+        }
+
+            return super.onOptionsItemSelected(item);
+        }
+
+        @Override
+        public void onBackPressed () {
+            new AlertDialog.Builder(this)
+                    .setTitle("INVENTO")
+                    .setMessage("കൊറച്ചു കഴിഞ്ഞ് പോവാം ഗഡി ?")
+                    .setNegativeButton("എന്നാ ശെരി ..", null)
+                    .setPositiveButton("പിന്നെ വരാം bro", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            Intent intent = new Intent(Intent.ACTION_MAIN);
+                            intent.addCategory(Intent.CATEGORY_HOME);
+                            startActivity(intent);
+                        }
+                    }).create().show();
+        }
+
+
+        @Override
+        public boolean onNavigationItemSelected (@NonNull MenuItem item){
+            return false;
+        }
     }
 
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setTitle("INVENTO")
-                .setMessage("കൊറച്ചു കഴിഞ്ഞ് പോവാം ഗഡി ?")
-                .setNegativeButton("എന്നാ ശെരി ..", null)
-                .setPositiveButton("പിന്നെ വരാം bro", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.addCategory(Intent.CATEGORY_HOME);
-                        startActivity(intent);
-                    }
-                }).create().show();
-    }
 
 
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
-    }
-}
