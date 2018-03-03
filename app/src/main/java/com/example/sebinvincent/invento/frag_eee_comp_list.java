@@ -97,6 +97,9 @@ public class frag_eee_comp_list extends Fragment {
                         listItems.add(listitem);
 
 
+
+
+
                     }
 
                     adapter=new Myadapter(listItems,getContext(),communication);

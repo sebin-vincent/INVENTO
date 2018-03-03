@@ -94,7 +94,11 @@ public class frag_ece_comp_list extends Fragment {
                         listItems.add(listitem);
 
 
+
+
                     }
+
+
 
                     adapter=new Myadapter(listItems,getContext(),communication);
                     recyclerView.setAdapter(adapter);

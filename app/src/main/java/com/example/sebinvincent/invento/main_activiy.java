@@ -87,7 +87,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         eee.setGravity(Gravity.CENTER | Gravity.BOTTOM);
         general.setGravity(Gravity.CENTER | Gravity.BOTTOM);
 
-        deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+        deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_app"));
 
 
         showmore.setOnClickListener(new View.OnClickListener() {
@@ -169,7 +169,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department = "cse";
 
                 textView.setText("COMPUTER SCIENCE \nAND \nENGINEERING");
-                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_app"));
 
                 it.setRotation(270);
                 eee.setRotation(270);
@@ -202,7 +202,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department="it";
 
                 textView.setText("INFORMATION\nTECHNOLOGY");
-                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/it_app"));
 
 
                 it.setRotation(0);
@@ -234,7 +234,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department="ece";
 
                 textView.setText("ELECTRONICS AND \nCOMMUNICATION \nENGINEERING");
-                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/ece_app"));
 
 
                 it.setRotation(270);
@@ -267,7 +267,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                 department="mech";
 
                 textView.setText("MECHANICAL\nENGINEERING");
-                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/mech_app"));
 
 
                 it.setRotation(270);
@@ -297,7 +297,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                 department="eee";
                 textView.setText("ELECTRICAL AND \nELECTRONICS \nENGINEERING");
-                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/cse_drawing"));
+                deptIcon.setImageURI(Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/eee_app"));
 
 
                 it.setRotation(270);

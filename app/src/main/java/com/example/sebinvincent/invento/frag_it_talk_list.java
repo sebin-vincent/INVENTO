@@ -103,6 +103,8 @@ public class frag_it_talk_list extends Fragment {
                         listItems.add(listitem);
 
 
+
+
                     }
 
                     adapter=new Myadapter(listItems,getContext(),communication);
