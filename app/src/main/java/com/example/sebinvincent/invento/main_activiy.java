@@ -431,11 +431,18 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
             return true;
         }
 
+
+        else if (id==R.id.developers){
+
+            startActivity(new Intent(main_activiy.this,acti_developers.class));
+            return  true;
+
         else if(id==R.id.coordinators){
 
             Intent intent=new Intent(main_activiy.this,acti_coordinators.class);
             startActivity(intent);
             return true;
+
         }
 
         return super.onOptionsItemSelected(item);
