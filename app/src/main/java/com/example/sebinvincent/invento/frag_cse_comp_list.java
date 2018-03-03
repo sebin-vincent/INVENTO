@@ -99,6 +99,8 @@ public class frag_cse_comp_list extends Fragment {
                         card_view listitem=new card_view(o.getString("title"),
                                 o.getString("description"),o.getString("imageurl"),o.getInt("prize"),o.getInt("day"),
                                 o.getInt("pk"));
+
+
                         listItems.add(listitem);
 
 

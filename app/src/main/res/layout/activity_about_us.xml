@@ -8,56 +8,116 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:textColor="#FF4081"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:textSize="25sp"
-            android:text="About Us"
+        android:layout_height="176dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+
+            android:background="@drawable/about_us_logo"
+
             />
 
+    </LinearLayout>
 
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="569dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="300dp"
+        android:background="#171A3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:textSize="30sp"
-                android:text="Invento 2018\nGEC PALAKKAD"
-                />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/back"
-                android:layout_gravity="center"
-                android:text="SHOW MORE"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="22dp"
+                android:text="ABOUT INVENTO"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="36dp"
+
                 />
 
 
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="inherit"
+                android:textSize="22dp"
+                android:textColor="@android:color/background_light"
 
+                android:text="
+ Invento, annual multifest of GEC Palakkad , holds a distinguished place amongst the various multifests all over Kerala. It has already won many hearts within short period of its inception.
+
+With a flashing variety of bigger and better events, INVENTO 18 , also aims to uphold the value of 'INVENTING GREEN' . The three day event is sure to leave its audience spellbound with the sheer amount of innovations and technologies that it shall showcase in its events.
+"
+
+                android:gravity="left"
+
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="ABOUT COLLEGE"
+                android:textSize="36dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="22dp"
+                android:text="Government Engineering College, Palakkad is a reputed engineering institution established by the Government of Kerala in 1999 and is situated in the calm and peaceful village of Sreekrishnapuram.
+The institution has five academic departments adequately staffed with faculties of national repute and a brilliant student community.
+Graduates of GEC Palakkad are employed in a range of public and private sector companies within the country and abroad.
+"
+                android:textColor="@android:color/background_light"
+                android:gravity="left"
+                />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:text="ok"
+
+                />
         </LinearLayout>
 
 
-    </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
