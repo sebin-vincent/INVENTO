@@ -100,7 +100,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                     case "cse":
 
 
-                        Toast.makeText(main_activiy.this,"Welcome to Computer Science",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this,"Welcome to Cse Virus",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), acti_dprt_cse.class);
                         startActivity(intent);
 
@@ -110,7 +110,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                         break;
                     case "it":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Information Technology",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this,"Welcome to Itianz",Toast.LENGTH_LONG).show();
 
                         intent=new Intent(getApplicationContext(),acti_dprt_it.class);
                          startActivity(intent);
@@ -119,7 +119,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                     case "mech":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Mechanical Department",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this,"Welcome to Royal Mech",Toast.LENGTH_LONG).show();
 
                         intent=new Intent(getApplicationContext(),acti_dprt_mech.class);
                         startActivity(intent);
@@ -127,7 +127,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                     case "ece":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Electronics Department",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this,"Welcome to Terror Ec",Toast.LENGTH_LONG).show();
 
 
                         intent=new Intent(getApplicationContext(),acti_dprt_ece.class);
@@ -136,7 +136,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                     case "eee":
 
-                        Toast.makeText(main_activiy.this,"Welcome to Electrical Department",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this,"Welcome to Power Eee",Toast.LENGTH_LONG).show();
 
 
                         intent=new Intent(getApplicationContext(),acti_dprt_eee.class);
@@ -144,7 +144,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                         break;
                     case "general":
 
-                        Toast.makeText(main_activiy.this,"Welcome to General Programmes",Toast.LENGTH_LONG).show();
+                        Toast.makeText(main_activiy.this,"Welcome to Generals",Toast.LENGTH_LONG).show();
 
 
                         intent=new Intent(getApplicationContext(),acti_dprt_general.class);
@@ -162,6 +162,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
     public void click(View view){
 
         ViewGroup.LayoutParams params;
+
         switch (view.getId()){
 
             case R.id.cse :
