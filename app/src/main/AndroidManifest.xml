@@ -19,14 +19,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".acti_google_signin">
+        <activity android:name=".acti_splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".acti_profile"/>
+
+        <activity android:name=".acti_profile" />
         <activity android:name=".main_activiy" />
         <activity android:name=".acti_dprt_cse" />
         <activity android:name=".acti_dprt_eee" />
@@ -50,7 +51,8 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".acti_google_signin"></activity>
     </application>
 
 </manifest>
