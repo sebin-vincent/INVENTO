@@ -33,7 +33,7 @@ public class frag_event_detail extends Fragment {
     TextView eventdet;
     ImageView picture;
     TextView reminder;
-    TextView showmore;
+    TextView register;
 
 
     String imager;
@@ -64,7 +64,7 @@ public class frag_event_detail extends Fragment {
         picture=(ImageView) view.findViewById(R.id.imageView3);
         reminder=(TextView)view.findViewById(R.id.reminder);
         date_reset=(TextView)view.findViewById(R.id.date_detail);
-        showmore=(TextView)view.findViewById(R.id.showingmore);
+        register=(TextView)view.findViewById(R.id.showingmore);
         prize_reset=(TextView)view.findViewById(R.id.prize_detail);
 
 
@@ -128,6 +128,14 @@ public class frag_event_detail extends Fragment {
             }
         });
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserintent=new Intent(Intent.ACTION_VIEW,Uri.parse(weburl));
+                startActivity(browserintent);
+            }
+        });
+
 
 
         return view;
@@ -158,7 +166,7 @@ public class frag_event_detail extends Fragment {
 
         prizemoney="Rs"+Integer.toString(prize);
 
-        weburl=Integer.toString(pk);
+        weburl="https://inventogec.org/events/"+Integer.toString(pk)+"/";
 
 
     }

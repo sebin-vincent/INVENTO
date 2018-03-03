@@ -52,18 +52,60 @@
         android:textStyle="bold" />
 
 
-    <Button
+    <TextView
         android:id="@+id/logout"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="206dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp"
-        android:background="@android:color/holo_blue_bright"
-        android:text="Sign Out"
-        android:theme="@style/AppTheme"
-        android:visibility="visible" />
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/back"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="SIGN OUT"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:src="@drawable/download" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="36dp"
+        android:layout_toStartOf="@+id/logout"
+        android:text="Made With   "
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/imageView4"
+        android:text="at GEC Sreekrishnapuram"
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="./tech_team"
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
 
 
 
