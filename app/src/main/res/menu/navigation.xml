@@ -25,6 +25,12 @@
         android:title="Reach us"
         app:showAsAction="never" />
     <item
+        android:id="@+id/coordinators"
+        android:orderInCategory="100"
+        android:title="Coordinators"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/profile"
         android:orderInCategory="100"
         android:title="Profile"

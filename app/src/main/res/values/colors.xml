@@ -7,6 +7,8 @@
     <color name="backgroundlist">#9297ce</color>
     <color name="white">#ffffff</color>
     <color name="transparent">#b3171a3b</color>
+    <color name="signout">#D10459</color>
+    <color name="black">#0a0909</color>
 
 
 </resources>

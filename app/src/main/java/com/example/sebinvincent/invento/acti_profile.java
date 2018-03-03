@@ -23,11 +23,10 @@ import com.google.firebase.auth.FirebaseAuth;
 public class acti_profile extends AppCompatActivity {
 
 
-    Button button ;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthlistener;
     GoogleSignInAccount account;
-    TextView Name,mail;
+    TextView Name,mail,pic;
     ImageView imageView;
 
     @Override
@@ -43,7 +42,7 @@ public class acti_profile extends AppCompatActivity {
         setContentView(R.layout.acti_profile);
 
 
-        button = (Button) findViewById(R.id.logout);
+        pic = (TextView) findViewById(R.id.logout);
         Name = (TextView) findViewById(R.id.name);
         mail = (TextView) findViewById(R.id.info);
 
@@ -89,7 +88,7 @@ public class acti_profile extends AppCompatActivity {
             }
         };
 
-        button.setOnClickListener(new View.OnClickListener() {
+        pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAuth.signOut();

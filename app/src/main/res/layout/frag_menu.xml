@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <Button
             android:id="@+id/backtohome"
             android:layout_width="wrap_content"
@@ -22,6 +21,7 @@
             android:background="@drawable/back"
             android:backgroundTint="#FFFFFF"
             android:shadowColor="@color/background"
+            android:onClick="click"
             android:text="HOME"
             android:textColor="#000000" />
 
@@ -37,6 +37,7 @@
             android:background="@drawable/back"
             android:backgroundTint="#FDAC40"
             android:padding="10dp"
+            android:onClick="click"
             android:shadowColor="@color/background"
             android:text="GENERAL" />
 
@@ -51,6 +52,7 @@
             android:layout_toStartOf="@+id/generalevents"
             android:background="@drawable/back"
             android:backgroundTint="#FDAC40"
+            android:onClick="click"
             android:padding="10dp"
             android:shadowColor="@color/background"
             android:text="ME" />
@@ -64,6 +66,7 @@
             android:layout_marginTop="96dp"
             android:background="@drawable/back"
             android:backgroundTint="#F17384"
+            android:onClick="click"
             android:padding="10dp"
             android:shadowColor="@color/background"
             android:text="cse" />
@@ -78,6 +81,7 @@
             android:layout_toEndOf="@+id/meevents"
             android:background="@drawable/back"
             android:backgroundTint="#547AF6"
+            android:onClick="click"
             android:padding="10dp"
             android:shadowColor="@color/background"
             android:text="IT" />
@@ -91,6 +95,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@drawable/back"
+            android:onClick="click"
             android:backgroundTint="#33C1E3"
             android:padding="10dp"
             android:shadowColor="@color/background"
@@ -106,6 +111,7 @@
             android:layout_gravity="center"
             android:background="@drawable/back"
             android:backgroundTint="#7AC7CB"
+            android:onClick="click"
             android:padding="10dp"
             android:shadowColor="@color/background"
             android:text="EEE" />
