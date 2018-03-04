@@ -152,7 +152,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="SANJEEVINI : RAKSHITH SATHISH"
+                android:text="SANJEEVANI : RAKSHITH SATHISH"
                 android:id="@+id/rakshith"
                 android:textColor="#ffffff"
                 android:onClick="click"

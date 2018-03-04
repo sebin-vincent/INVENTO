@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class acti_call_coordi extends AppCompatActivity {
     TextView shaji, soza, arathy, vinitha, soumya, sabik, afsal, sabin, mahesh, rakshith;
@@ -52,25 +53,120 @@ public class acti_call_coordi extends AppCompatActivity {
             case R.id.shaji:
 
 
-                intent.setData(Uri.parse("tel:" + "8086781913"));
 
-                startActivity(intent);
+
+                try{
+
+                    intent.setData(Uri.parse("tel:9061842389"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
                 break;
 
-            case R.id.soza:
+
+                    case R.id.soza:
 
 
-                intent.setData(Uri.parse("tel:" + "8086781913"));
+                        try{
 
-                startActivity(intent);
-                break;
+                            intent.setData(Uri.parse("tel:7736118919"));
+                            startActivity(intent);
+                        }catch (SecurityException se) {
+                            se.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                        }
+                        break;
 
             case R.id.arathi:
 
 
-                intent.setData(Uri.parse("tel:" + "8086781913"));
+                try{
 
-                startActivity(intent);
+                    intent.setData(Uri.parse("tel:9744331073"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            case R.id.sabik:
+                try{
+
+                    intent.setData(Uri.parse("tel:8891284053"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            case R.id.sabin:
+                try{
+
+                    intent.setData(Uri.parse("tel:9744560260"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.mahesh:
+                try{
+
+                    intent.setData(Uri.parse("tel:9037687128"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            case R.id.afsal:
+                try{
+
+                    intent.setData(Uri.parse("tel:8943436303"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            case R.id.rakshith:
+                try{
+
+                    intent.setData(Uri.parse("tel:7356162825"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            case R.id.vinitha:
+
+                try{
+
+                    intent.setData(Uri.parse("tel:9495070478"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            case R.id.soumya:
+                try{
+
+                    intent.setData(Uri.parse("tel:9447954991"));
+                    startActivity(intent);
+                }catch (SecurityException se) {
+                    se.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Permission Error", Toast.LENGTH_SHORT).show();
+                }
                 break;
 
 

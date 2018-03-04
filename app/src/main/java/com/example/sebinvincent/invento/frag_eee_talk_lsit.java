@@ -86,13 +86,46 @@ public class frag_eee_talk_lsit extends Fragment {
 
         }
     }
+
     private  void loadRecyclerviewData(){
 
         final ProgressDialog progressDialog =new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading data....");
         progressDialog.show();
+        if(!isNetworkConnected()){
+
+            eee_talk_array array= new eee_talk_array();
+
+            int l=array.getLength();
+            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
+            progressDialog.dismiss();
 
 
+            for (int i=0;i<l;i++){
+
+
+                /*card_view listitem=new card_view(array.getNmaes(i),
+                        array.getProgram(i),uri.toString());
+                listItems.add(listitem);*/
+                String rr=array.getDesc(i);
+
+                String rrnew=rr.replace("/\\r/g",("xc"));
+                rr=rrnew.replace("/\\r/g",("xc"));
+                //.replace("/\\r/g","")
+
+                card_view listitem=new card_view(array.getTitle(i),
+                        array.getDesc(i),uri.toString(),array.getPrize(i),array.getDay(i),
+                        array.getPk(i));
+                listItems.add(listitem);
+
+
+            }
+
+            adapter=new Myadapter(listItems,getActivity(),communication);
+            recyclerView.setAdapter(adapter);
+
+        }
+        else {
 
             final StringRequest stringRequest = new StringRequest(Request.Method.GET, url_data, new Response.Listener<String>() {
                 @Override
@@ -106,8 +139,8 @@ public class frag_eee_talk_lsit extends Fragment {
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject o = array.getJSONObject(i);
-                            card_view listitem = new card_view(o.getString("name"),
-                                    o.getString("bio"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
+                            card_view listitem = new card_view(o.getString("title"),
+                                    o.getString("description"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
                                     o.getInt("pk"));
                             listItems.add(listitem);
 
@@ -128,14 +161,42 @@ public class frag_eee_talk_lsit extends Fragment {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
+                            eee_talk_array array= new eee_talk_array();
 
+                            int l=array.getLength();
+                            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
+                            progressDialog.dismiss();
+
+
+                            for (int i=0;i<l;i++){
+
+
+                /*card_view listitem=new card_view(array.getNmaes(i),
+                        array.getProgram(i),uri.toString());
+                listItems.add(listitem);*/
+                                String rr=array.getDesc(i);
+
+                                String rrnew=rr.replace("/\\r/g",("xc"));
+                                rr=rrnew.replace("/\\r/g",("xc"));
+                                //.replace("/\\r/g","")
+
+                                card_view listitem=new card_view(array.getTitle(i),
+                                        array.getDesc(i),uri.toString(),array.getPrize(i),array.getDay(i),
+                                        array.getPk(i));
+                                listItems.add(listitem);
+
+
+                            }
+
+                            adapter=new Myadapter(listItems,getActivity(),communication);
+                            recyclerView.setAdapter(adapter);
                         }
                     }
             );
 
             RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
             requestQueue.add(stringRequest);
-
+        }
 
     }
     Interface_Frag_Communi communication=new Interface_Frag_Communi() {
@@ -157,8 +218,6 @@ public class frag_eee_talk_lsit extends Fragment {
         }
 
     };
-
-
 
 
 }

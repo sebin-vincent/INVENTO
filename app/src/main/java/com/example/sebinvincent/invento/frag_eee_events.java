@@ -50,9 +50,9 @@ public class frag_eee_events extends Fragment {
             @Override
             public void onClick(View view) {
 
-                frag_cse_talk_list csetalks =new frag_cse_talk_list();
+                frag_eee_talk_lsit eeetalks =new frag_eee_talk_lsit();
                 FragmentManager manager=getFragmentManager();
-                manager.beginTransaction().replace(R.id.Container,csetalks,csetalks.getTag()).addToBackStack("").commit();
+                manager.beginTransaction().replace(R.id.Container,eeetalks,eeetalks.getTag()).addToBackStack("").commit();
 
             }
         });

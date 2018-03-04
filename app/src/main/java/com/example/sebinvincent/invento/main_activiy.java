@@ -434,7 +434,6 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         else if (id == R.id.coordinators)
         {
 
-
             startActivity(new Intent(main_activiy.this, acti_call_coordi.class));
             return true;
 

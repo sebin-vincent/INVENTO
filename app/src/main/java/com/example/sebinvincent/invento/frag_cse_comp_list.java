@@ -151,9 +151,9 @@ public class frag_cse_comp_list extends Fragment {
 
 
 
-                            String normailString = stripHtml(o.getString("description"));
+
                             card_view listitem = new card_view(o.getString("title"),
-                                    normailString, o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
+                                    o.getString("description"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
                                     o.getInt("pk"));
 
 
