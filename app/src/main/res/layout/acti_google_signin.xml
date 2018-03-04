@@ -7,14 +7,14 @@
     android:background="@color/background"
     tools:context="com.example.sebinvincent.invento.acti_google_signin">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/circleImageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:src="@drawable/inventologo" />
+        android:layout_marginTop="41dp"
+        android:src="@mipmap/inventologo" />
 
     <TextView
         android:layout_width="wrap_content"
