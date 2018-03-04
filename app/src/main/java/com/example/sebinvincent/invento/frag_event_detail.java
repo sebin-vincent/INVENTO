@@ -18,7 +18,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.text.Normalizer;
 import java.util.Calendar;
+import java.util.regex.Pattern;
 
 /**
  * Created by sebin vincent on 23-02-2018.
@@ -152,6 +156,17 @@ public class frag_event_detail extends Fragment {
         date=getArguments().getInt("DATE");
         prize=getArguments().getInt("PRIZE");
         pk=getArguments().getInt("PK");
+
+
+        String s1 = Normalizer.normalize(eventdetail, Normalizer.Form.NFKD);
+        String regex = Pattern.quote("[\\p{InCombiningDiacriticalMarks}\\p{IsLm}\\p{IsSk}]+");
+
+        Charset ascii = StandardCharsets.US_ASCII;
+
+
+        eventdetail = new String(s1.replaceAll(regex, "").getBytes(ascii), ascii);
+        eventdetail=eventdetail.replace("a???","-");
+
 
         switch (date){
 
