@@ -435,7 +435,8 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         {
 
 
-                return true;
+            startActivity(new Intent(main_activiy.this, acti_call_coordi.class));
+            return true;
 
         }
 

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.sebinvincent.invento.acti_call_coordi">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Coordinators"
+                android:textColor="#D10459"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="#ffffff" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Cheif coordinator : SAJID MUSALIYAR"
+                android:id="@+id/shaji"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:onClick="click"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Program Convenor : DHILRAJ SOZA"
+                android:id="@+id/soza"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Secretary : ARATHI MENON"
+                android:id="@+id/arathi"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Staff Coordinator : DR. VINITHA"
+                android:id="@+id/vinitha"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Department Coordinators"
+                android:textColor="#D10459"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="#ffffff" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="CSE : SOUMYA RAJ"
+                android:id="@+id/soumya"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="ECE : SABIK T K"
+                android:id="@+id/sabik"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="EEE : SABIN MUNAVIR"
+                android:id="@+id/sabin"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left"
+                android:text="ME : AFSAL E"
+                android:id="@+id/afsal"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="IT : MAHESH M NAIR"
+                android:id="@+id/mahesh"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Social Initiative"
+                android:textColor="#D10459"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="#ffffff" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="SANJEEVINI : RAKSHITH SATHISH"
+                android:id="@+id/rakshith"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
