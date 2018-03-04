@@ -427,7 +427,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
         else if (id == R.id.developers)
         {
 
-            startActivity(new Intent(main_activiy.this, acti_developers.class));
+            startActivity(new Intent(main_activiy.this, acti_develop.class));
             return true;
         }
 

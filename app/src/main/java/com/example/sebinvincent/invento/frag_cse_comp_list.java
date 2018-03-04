@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -87,6 +88,13 @@ public class frag_cse_comp_list extends Fragment {
 
         }
     }
+    public String stripHtml(String html) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            return String.valueOf(Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            return String.valueOf(Html.fromHtml(html));
+        }
+    }
 
 
     private  void loadRecyclerviewData(){
@@ -141,9 +149,11 @@ public class frag_cse_comp_list extends Fragment {
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject o = array.getJSONObject(i);
 
-                            //String normailString = Jsoup.parse(htmlString).text()
+
+
+                            String normailString = stripHtml(o.getString("description"));
                             card_view listitem = new card_view(o.getString("title"),
-                                    o.getString("description"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
+                                    normailString, o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
                                     o.getInt("pk"));
 
 
