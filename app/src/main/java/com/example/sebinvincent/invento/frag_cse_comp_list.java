@@ -140,6 +140,8 @@ public class frag_cse_comp_list extends Fragment {
 
                         for (int i = 0; i < array.length(); i++) {
                             JSONObject o = array.getJSONObject(i);
+
+                            //String normailString = Jsoup.parse(htmlString).text()
                             card_view listitem = new card_view(o.getString("title"),
                                     o.getString("description"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
                                     o.getInt("pk"));
@@ -162,6 +164,10 @@ public class frag_cse_comp_list extends Fragment {
 
 
                     } catch (JSONException e) {
+
+
+
+
                         e.printStackTrace();
                     }
 
