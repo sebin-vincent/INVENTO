@@ -94,6 +94,7 @@ public class frag_mech_comp_list extends Fragment {
                         listItems.add(listitem);
 
 
+
                     }
 
                     adapter=new Myadapter(listItems,getContext(),communication);

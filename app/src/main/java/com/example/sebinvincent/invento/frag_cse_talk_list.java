@@ -2,6 +2,9 @@ package com.example.sebinvincent.invento;
 
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -73,6 +76,18 @@ public class frag_cse_talk_list extends Fragment {
 
     }
 
+    protected boolean isNetworkConnected() {
+        try {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            return (mNetworkInfo == null) ? false : true;
+
+        }catch (NullPointerException e){
+            return false;
+
+        }
+    }
+
     private  void loadRecyclerviewData(){
 
         final ProgressDialog progressDialog =new ProgressDialog(getActivity());
@@ -96,6 +111,8 @@ public class frag_cse_talk_list extends Fragment {
                                 o.getString("description"),o.getString("imageurl"),o.getInt("prize"),o.getInt("day"),
                                 o.getInt("pk"));
                         listItems.add(listitem);
+
+
 
 
                     }

@@ -136,8 +136,6 @@ public class frag_cse_comp_list extends Fragment {
                     progressDialog.dismiss();
 
                     try {
-
-
                         JSONArray array = new JSONArray(response);
 
                         for (int i = 0; i < array.length(); i++) {
@@ -145,6 +143,8 @@ public class frag_cse_comp_list extends Fragment {
                             card_view listitem = new card_view(o.getString("title"),
                                     o.getString("description"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
                                     o.getInt("pk"));
+
+
                             listItems.add(listitem);
 
                             System.out.println("Title: "+o.getString("title"));
@@ -159,6 +159,7 @@ public class frag_cse_comp_list extends Fragment {
 
                         adapter = new Myadapter(listItems, getContext(), communication);
                         recyclerView.setAdapter(adapter);
+
 
                     } catch (JSONException e) {
                         e.printStackTrace();

@@ -23,7 +23,6 @@ public class cse_comp_array {
         this.title.add("CODE RELAY");
         this.title.add("ENIGMA");
         this.title.add("BAROQUE");
-
         this.title.add("INSPECTRA");
         this.title.add("CAPITAL CONFLICT");
         this.title.add("CODE BYTES");

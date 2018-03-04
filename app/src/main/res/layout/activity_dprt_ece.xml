@@ -22,23 +22,27 @@
         android:id="@+id/Container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="50dp">
-    </FrameLayout>
-
+        android:layout_below="@+id/ece_head"
+        android:layout_marginBottom="55dp"></FrameLayout>
 
 
     <ImageView
         android:id="@+id/menu_ece"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:src="@drawable/logo"
+        android:textColor="#FFFFFF" />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:src="@drawable/logo"
-        android:textColor="#FFFFFF"
-
-        />
+        android:text="MENU"
+        android:textColor="@color/white"
+        android:id="@+id/textView5" />
 
 
 

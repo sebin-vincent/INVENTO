@@ -20,7 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".acti_google_signin">
+        <activity android:name=".acti_splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,7 +52,10 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
+
+        <activity android:name=".acti_developers"></activity>
         <activity android:name=".acti_coordinators"></activity>
+        <activity android:name=".acti_google_signin"></activity>
     </application>
 
 </manifest>

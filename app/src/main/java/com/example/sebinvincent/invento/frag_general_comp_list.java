@@ -86,8 +86,8 @@ public class frag_general_comp_list extends Fragment {
                 try {
 
 
-
                     JSONArray array=new JSONArray(response);
+
 
                     for (int i=0;i<array.length();i++){
                         JSONObject o= array.getJSONObject(i);
@@ -96,11 +96,12 @@ public class frag_general_comp_list extends Fragment {
                                 o.getInt("pk"));
                         listItems.add(listitem);
 
-
                     }
 
                     adapter=new Myadapter(listItems,getContext(),communication);
                     recyclerView.setAdapter(adapter);
+
+
 
                 }catch (JSONException e){
                     e.printStackTrace();
