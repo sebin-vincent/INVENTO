@@ -1,13 +1,19 @@
 package com.example.sebinvincent.invento;
 
+import android.*;
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +37,42 @@ public class acti_call_coordi extends AppCompatActivity {
         mahesh = (TextView) findViewById(R.id.mahesh);
         rakshith = (TextView) findViewById(R.id.rakshith);
 
+        if(!runtime_permissions()){
+            //Intent i =new Intent(getApplicationContext(),GPS_Service.class);
+            //startService(i);
+            enable_buttons();
 
+        }
+
+
+
+
+
+    }
+    private boolean runtime_permissions() {
+        if(Build.VERSION.SDK_INT >= 23 && ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED ){
+
+            requestPermissions(new String[]{Manifest.permission.CALL_PHONE},100);
+
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == 100){
+            if( grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED){
+                enable_buttons();
+            }else {
+                runtime_permissions();
+            }
+        }
+    }
+    public  void enable_buttons(){
+        //nothing to do
     }
 
     public void click(View view) {

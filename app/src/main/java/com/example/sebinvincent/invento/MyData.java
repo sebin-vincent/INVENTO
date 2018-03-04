@@ -30,16 +30,16 @@ public class MyData {
         };
 
     static Integer[] drawableArray = {
-            R.drawable.biswaz,
-            R.drawable.sebin,
-            R.drawable.anoopettan,
-            R.drawable.shijith,
-            R.drawable.nandeem,
-            R.drawable.manu,
-            R.drawable.sufiyikka,
-            R.drawable.devan,
-            R.drawable.hemang,
-            R.drawable.ajith
+            R.mipmap.biswaz,
+            R.mipmap.sebin,
+            R.mipmap.anoopettan,
+            R.mipmap.shijith,
+            R.mipmap.nandeem,
+            R.mipmap.manu,
+            R.mipmap.sufiyikka,
+            R.mipmap.devan,
+            R.mipmap.hemang,
+            R.mipmap.ajith
             };
 
     static String[] emailArray = {
