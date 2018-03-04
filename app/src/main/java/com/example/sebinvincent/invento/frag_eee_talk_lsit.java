@@ -2,6 +2,10 @@ package com.example.sebinvincent.invento;
 
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -70,57 +74,67 @@ public class frag_eee_talk_lsit extends Fragment {
 
         return view;
     }
+
+    protected boolean isNetworkConnected() {
+        try {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            return (mNetworkInfo == null) ? false : true;
+
+        }catch (NullPointerException e){
+            return false;
+
+        }
+    }
     private  void loadRecyclerviewData(){
 
         final ProgressDialog progressDialog =new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading data....");
         progressDialog.show();
 
-        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url_data, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                progressDialog.dismiss();
-
-                try {
 
 
+            final StringRequest stringRequest = new StringRequest(Request.Method.GET, url_data, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    progressDialog.dismiss();
 
-                    JSONArray array=new JSONArray(response);
-
-                    for (int i=0;i<array.length();i++){
-                        JSONObject o= array.getJSONObject(i);
-                        card_view listitem=new card_view(o.getString("name"),
-                                o.getString("bio"),o.getString("imageurl"),o.getInt("prize"),o.getInt("day"),
-                                o.getInt("pk"));
-                        listItems.add(listitem);
+                    try {
 
 
+                        JSONArray array = new JSONArray(response);
+
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject o = array.getJSONObject(i);
+                            card_view listitem = new card_view(o.getString("name"),
+                                    o.getString("bio"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
+                                    o.getInt("pk"));
+                            listItems.add(listitem);
+
+
+                        }
+
+                        adapter = new Myadapter(listItems, getContext(), communication);
+                        recyclerView.setAdapter(adapter);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
 
-                    adapter=new Myadapter(listItems,getContext(),communication);
-                    recyclerView.setAdapter(adapter);
 
-                }catch (JSONException e){
-                    e.printStackTrace();
                 }
+            },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
 
 
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                        progressDialog.dismiss();
-                        Log.d(getTag(),error.getMessage());
-                        Toast.makeText(getContext(),error.getMessage(),Toast.LENGTH_LONG).show();
-
+                        }
                     }
-                }
-        );
+            );
 
-        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-        requestQueue.add(stringRequest);
+            RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+            requestQueue.add(stringRequest);
 
 
     }
