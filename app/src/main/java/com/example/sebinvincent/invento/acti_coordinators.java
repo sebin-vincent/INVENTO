@@ -47,7 +47,6 @@ public class acti_coordinators extends AppCompatActivity {
                 //do some thing
                 // Toast.makeText(getApplicationContext(),"Bus Time =" + view.getTag(),Toast.LENGTH_SHORT).show();
                 Intent callIntent=new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:"+(String)view.getTag()));
                 startActivity(callIntent);
             }
         });
