@@ -1,6 +1,7 @@
 package com.example.sebinvincent.invento;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -29,6 +30,52 @@ public class acti_call_coordi extends AppCompatActivity {
         mahesh = (TextView) findViewById(R.id.mahesh);
         rakshith = (TextView) findViewById(R.id.rakshith);
 
+
+    }
+
+    public void click(View view) {
+
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+
+        switch (view.getId()) {
+
+            case R.id.shaji:
+
+
+                intent.setData(Uri.parse("tel:" + "8086781913"));
+
+                startActivity(intent);
+                break;
+
+            case R.id.soza:
+
+
+                intent.setData(Uri.parse("tel:" + "8086781913"));
+
+                startActivity(intent);
+                break;
+
+            case R.id.arathi:
+
+
+                intent.setData(Uri.parse("tel:" + "8086781913"));
+
+                startActivity(intent);
+                break;
+
+
+
+        }
 
 
 

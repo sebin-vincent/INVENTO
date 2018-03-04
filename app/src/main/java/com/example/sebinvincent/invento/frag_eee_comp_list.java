@@ -2,6 +2,8 @@ package com.example.sebinvincent.invento;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -71,6 +73,18 @@ public class frag_eee_comp_list extends Fragment {
         return view;
     }
 
+    protected boolean isNetworkConnected() {
+        try {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            return (mNetworkInfo == null) ? false : true;
+
+        }catch (NullPointerException e){
+            return false;
+
+        }
+    }
+
 
     private  void loadRecyclerviewData(){
 
@@ -78,55 +92,102 @@ public class frag_eee_comp_list extends Fragment {
         progressDialog.setMessage("Loading data....");
         progressDialog.show();
 
-        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url_data, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                progressDialog.dismiss();
+        if(!isNetworkConnected()){
 
-                try {
+            eee_comp_array array= new eee_comp_array();
 
-
-
-                    JSONArray array=new JSONArray(response);
-
-                    for (int i=0;i<array.length();i++){
-                        JSONObject o= array.getJSONObject(i);
-                        card_view listitem=new card_view(o.getString("title"),
-                                o.getString("description"),o.getString("imageurl"),o.getInt("prize"),o.getInt("day"),
-                                o.getInt("pk"));
-                        listItems.add(listitem);
+            int l=array.getLength();
+            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
+            progressDialog.dismiss();
 
 
+            for (int i=0;i<l;i++){
 
 
+                /*card_view listitem=new card_view(array.getNmaes(i),
+                        array.getProgram(i),uri.toString());
+                listItems.add(listitem);*/
+                String rr=array.getDesc(i);
 
-                    }
+                String rrnew=rr.replace("/\\r/g",("xc"));
+                rr=rrnew.replace("/\\r/g",("xc"));
+                //.replace("/\\r/g","")
 
-                    adapter=new Myadapter(listItems,getContext(),communication);
-                    recyclerView.setAdapter(adapter);
-
-                }catch (JSONException e){
-                    e.printStackTrace();
-                }
+                card_view listitem=new card_view(array.getTitle(i),
+                        array.getDesc(i),uri.toString(),array.getPrize(i),array.getDay(i),
+                        array.getPk(i));
+                listItems.add(listitem);
 
 
             }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
 
-                        progressDialog.dismiss();
-                        Log.d(getTag(),error.getMessage());
-                        Toast.makeText(getContext(),error.getMessage(),Toast.LENGTH_LONG).show();
+            adapter=new Myadapter(listItems,getActivity(),communication);
+            recyclerView.setAdapter(adapter);
 
+        }
+
+        else {
+
+            final StringRequest stringRequest = new StringRequest(Request.Method.GET, url_data, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    progressDialog.dismiss();
+
+                    try {
+
+
+                        JSONArray array = new JSONArray(response);
+
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject o = array.getJSONObject(i);
+                            card_view listitem = new card_view(o.getString("title"),
+                                    o.getString("description"), o.getString("imageurl"), o.getInt("prize"), o.getInt("day"),
+                                    o.getInt("pk"));
+                            listItems.add(listitem);
+
+
+                        }
+
+                        adapter = new Myadapter(listItems, getContext(), communication);
+                        recyclerView.setAdapter(adapter);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
+
+
                 }
-        );
+            },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
 
-        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-        requestQueue.add(stringRequest);
+                            eee_comp_array array= new eee_comp_array();
 
+                            int l=array.getLength();
+                            Uri uri = Uri.parse("android.resource://com.example.sebinvincent.invento/drawable/loadings");
+                            progressDialog.dismiss();
+
+
+                            for (int i=0;i<l;i++){
+
+                                card_view listitem=new card_view(array.getTitle(i),
+                                        array.getDesc(i),uri.toString(),array.getPrize(i),array.getDay(i),
+                                        array.getPk(i));
+                                listItems.add(listitem);
+
+
+                            }
+
+                            adapter=new Myadapter(listItems,getActivity(),communication);
+                            recyclerView.setAdapter(adapter);
+                        }
+                    }
+            );
+
+            RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+            requestQueue.add(stringRequest);
+        }
 
     }
 
