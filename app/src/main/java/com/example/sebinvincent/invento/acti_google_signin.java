@@ -149,7 +149,7 @@ public class acti_google_signin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
-                            Toast.makeText(acti_google_signin.this, " Logged in Successfully",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(acti_google_signin.this, " Welcome to INVENTO'18",Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             //updateUI(user);
                         } else {

@@ -42,9 +42,9 @@ public class acti_profile extends AppCompatActivity {
         setContentView(R.layout.acti_profile);
 
 
-        pic = (TextView) findViewById(R.id.logout);
-        Name = (TextView) findViewById(R.id.name);
-        mail = (TextView) findViewById(R.id.info);
+        pic = (TextView)findViewById(R.id.logout);
+        Name = (TextView)findViewById(R.id.name);
+        mail = (TextView)findViewById(R.id.info);
 
         imageView = (ImageView) findViewById(R.id.profile_pic);
         account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
@@ -54,6 +54,33 @@ public class acti_profile extends AppCompatActivity {
             Uri pphoto = account.getPhotoUrl();
             String pmail = account.getEmail();
             String image=pphoto.toString();
+            String fname=account.getGivenName();
+
+
+            switch (pmail){
+
+
+                case "sows1997@gmail.com" : mail.setText("WELCOME CSE CO-ORDINATOR"); break;
+
+                case "rakshith.sathish@gmail.com" : mail.setText("WELCOME SANJEEVANI CO-ORDINATOR"); break;
+
+                case "mnairmahesh26@gmail.com" : mail.setText("WELCOME IT CO-ORDINATOR");break;
+
+                case  "jeswinchacko@gmail.com" : mail.setText("WELCOME FINANCE HEAD");break;
+
+                case "mputhenhouse8@gmail.com" : mail.setText("WELCOME FRONT-END DEVELOPER");break;
+
+                case "msmjnvk@gmail.com" : mail.setText("WELCOME INVENTO CO-ORDINATOR");break;
+
+                case  "biswasb007@gmail.com" : mail.setText("WELCOME SWITCH");break;
+
+                case "fsnknoor@gmail.com" : mail.setText("WELCOME KANDATHIL NOORY"); break;
+
+                case "gauthamgr19@gmail.com" : mail.setText("WELCOME THADIYA"); break;
+
+                default: mail.setText("WELCOME  "+ fname);
+            }
+
 
 
 

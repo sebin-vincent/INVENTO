@@ -9,19 +9,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:gravity="center_vertical"
+        >
 
         <Button
             android:id="@+id/backtohome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/meevents"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="31dp"
+            android:layout_alignEnd="@+id/generalevents"
+            android:layout_below="@+id/generalevents"
+            android:layout_marginEnd="78dp"
+            android:layout_marginTop="54dp"
             android:background="@drawable/back"
             android:backgroundTint="#FFFFFF"
-            android:shadowColor="@color/background"
             android:onClick="click"
+            android:shadowColor="@color/background"
             android:text="HOME"
             android:textColor="#000000" />
 
@@ -61,9 +63,7 @@
             android:id="@+id/cseevents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/eceevents"
-            android:layout_marginTop="96dp"
             android:background="@drawable/back"
             android:backgroundTint="#F17384"
             android:onClick="click"
