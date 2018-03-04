@@ -16,26 +16,38 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".acti_splash">
+        <activity android:name=".acti_splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".acti_profile" />
-        <activity android:name=".main_activiy" />
-        <activity android:name=".acti_dprt_cse" />
-        <activity android:name=".acti_dprt_eee" />
-        <activity android:name=".acti_dprt_ece" />
-        <activity android:name=".acti_dprt_mech" />
-        <activity android:name=".acti_dprt_it" />
-        <activity android:name=".acti_dprt_general" />
-        <activity android:name=".AboutUS" />
-        <activity android:name=".Notification" />
+        <activity android:name=".acti_profile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".main_activiy"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_dprt_cse"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_dprt_eee"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_dprt_ece"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_dprt_mech"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_dprt_it"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_dprt_general"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AboutUS"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Notification"
+            android:screenOrientation="portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -50,10 +62,14 @@
 
         <activity
             android:name=".MapsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".acti_google_signin" />
-        <activity android:name=".acti_develop" />
-        <activity android:name=".acti_call_coordi"></activity>
+        <activity android:name=".acti_google_signin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_develop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".acti_call_coordi"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

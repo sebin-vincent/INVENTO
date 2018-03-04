@@ -17,7 +17,7 @@ public class MyData {
             "Ajith"
         };
     static String[] versionArray = {
-            "(Teach team coordinator)",
+            "(Tech team coordinator)",
             "(App development team coordinator)",
             "(App development team mentor)",
             "(App development team member)",
