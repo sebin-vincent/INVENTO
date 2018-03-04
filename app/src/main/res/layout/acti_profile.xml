@@ -11,7 +11,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="389dp"
+        android:layout_width="match_parent"
         android:layout_height="207dp"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/side_nav_bar"
