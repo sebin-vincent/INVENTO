@@ -27,7 +27,7 @@
     <item
         android:id="@+id/coordinators"
         android:orderInCategory="100"
-        android:title="Coordinators"
+        android:title="Call Coordinators"
         app:showAsAction="never" />
 
     <item

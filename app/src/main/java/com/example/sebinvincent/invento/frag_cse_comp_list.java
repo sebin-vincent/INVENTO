@@ -159,14 +159,6 @@ public class frag_cse_comp_list extends Fragment {
 
                             listItems.add(listitem);
 
-                            System.out.println("Title: "+o.getString("title"));
-                            System.out.println("description"+o.getString("description"));
-                            System.out.println("prize"+o.getInt("prize"));
-                            System.out.println("day"+o.getInt("day"));
-                            System.out.println("pk"+o.getInt("pk"));
-
-
-
                         }
 
                         adapter = new Myadapter(listItems, getContext(), communication);

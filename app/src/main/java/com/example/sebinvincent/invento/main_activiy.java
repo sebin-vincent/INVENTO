@@ -99,7 +99,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                     case "cse":
 
 
-                        Toast.makeText(main_activiy.this, "Welcome to Cse Virus", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(main_activiy.this, "#LetsInvento", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), acti_dprt_cse.class);
                         startActivity(intent);
 
@@ -107,7 +107,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                         break;
                     case "it":
 
-                        Toast.makeText(main_activiy.this, "Welcome to Itianz", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(main_activiy.this, "#LetsInvento", Toast.LENGTH_SHORT).show();
 
                         intent = new Intent(getApplicationContext(), acti_dprt_it.class);
                         startActivity(intent);
@@ -116,7 +116,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                     case "mech":
 
-                        Toast.makeText(main_activiy.this, "Welcome to Royal Mech", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(main_activiy.this, "#LetsInvento", Toast.LENGTH_SHORT).show();
 
                         intent = new Intent(getApplicationContext(), acti_dprt_mech.class);
                         startActivity(intent);
@@ -124,7 +124,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                     case "ece":
 
-                        Toast.makeText(main_activiy.this, "Welcome to Terror Ec", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(main_activiy.this, "#LetsInvento", Toast.LENGTH_SHORT).show();
 
 
                         intent = new Intent(getApplicationContext(), acti_dprt_ece.class);
@@ -133,7 +133,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
 
                     case "eee":
 
-                        Toast.makeText(main_activiy.this, "Welcome to Power Eee", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(main_activiy.this, "#LetsInvento", Toast.LENGTH_SHORT).show();
 
 
                         intent = new Intent(getApplicationContext(), acti_dprt_eee.class);
@@ -141,7 +141,7 @@ public class main_activiy extends AppCompatActivity implements NavigationView.On
                         break;
                     case "general":
 
-                        Toast.makeText(main_activiy.this, "Welcome to Generals", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(main_activiy.this, "#LetsInvento", Toast.LENGTH_SHORT).show();
 
 
                         intent = new Intent(getApplicationContext(), acti_dprt_general.class);

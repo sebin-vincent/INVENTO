@@ -17,16 +17,15 @@
         android:src="@mipmap/inventologo" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/circleImageView"
+        android:layout_alignBottom="@+id/circleImageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
         android:text="INVENTING GREEN "
         android:textColor="#ffffff"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:id="@+id/textView3" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
@@ -40,6 +39,17 @@
         android:textSize="40dp"
         android:textStyle="bold" />
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/googlebtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:text="Sign In To Proceed"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -57,9 +67,11 @@
         android:id="@+id/googlebtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

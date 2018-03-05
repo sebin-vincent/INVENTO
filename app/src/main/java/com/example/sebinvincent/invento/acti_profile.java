@@ -60,23 +60,55 @@ public class acti_profile extends AppCompatActivity {
             switch (pmail){
 
 
-                case "sows1997@gmail.com" : mail.setText("WELCOME CSE CO-ORDINATOR"); break;
+                case "sows1997@gmail.com" :
 
-                case "rakshith.sathish@gmail.com" : mail.setText("WELCOME SANJEEVANI CO-ORDINATOR"); break;
+                    mail.setText("WELCOME CSE CO-ORDINATOR");
+                    break;
 
-                case "mnairmahesh26@gmail.com" : mail.setText("WELCOME IT CO-ORDINATOR");break;
+                case "rakshith.sathish@gmail.com" :
 
-                case  "jeswinchacko@gmail.com" : mail.setText("WELCOME FINANCE HEAD");break;
+                    mail.setText("WELCOME SANJEEVANI CO-ORDINATOR");
+                    break;
 
-                case "mputhenhouse8@gmail.com" : mail.setText("WELCOME FRONT-END DEVELOPER");break;
+                case "mnairmahesh26@gmail.com" :
 
-                case "msmjnvk@gmail.com" : mail.setText("WELCOME INVENTO CO-ORDINATOR");break;
+                    mail.setText("WELCOME IT CO-ORDINATOR");
+                    break;
 
-                case  "biswasb007@gmail.com" : mail.setText("WELCOME SWITCH");break;
+                case  "jeswinchacko@gmail.com" :
 
-                case "fsnknoor@gmail.com" : mail.setText("WELCOME KANDATHIL NOORY"); break;
+                    mail.setText("WELCOME FINANCE HEAD");
+                    break;
 
-                case "gauthamgr19@gmail.com" : mail.setText("WELCOME THADIYA"); break;
+                case "mputhenhouse8@gmail.com" :
+
+                    mail.setText("WELCOME FRONT-END DEVELOPER");
+                    break;
+
+                case "msmjnvk@gmail.com" :
+
+                    mail.setText("WELCOME INVENTO CO-ORDINATOR");
+                    break;
+
+                case  "biswasb007@gmail.com" :
+
+                    mail.setText("WELCOME TECH_TEAM COORDINATOR");
+                    break;
+
+                case "gauthamgr19@gmail.com" :
+                    mail.setText("WELCOME THADIYA");
+                    break;
+
+                case "vishnu1998prasad@gmail.com":
+
+                        mail.setText("WELCOME LEANDRO");
+                        break;
+
+                case "s.rejul10@gmail.com":
+
+                    mail.setText("WELCOME MOTTA BHAI!");
+                    break;
+
 
                 default: mail.setText("WELCOME  "+ fname);
             }

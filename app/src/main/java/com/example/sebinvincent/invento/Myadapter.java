@@ -46,36 +46,42 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
 //        lisItem=listItems.get(position);
-
-        holder.heading.setText(listItems.get(position).getHead());
-
-
-        Picasso.with(context).load(listItems.get(position).getImage_url()).into(holder.image);
-
-        frag_event_detail fragmentB=new frag_event_detail();
-        Bundle bundle=new Bundle();
-        bundle.putString("NAME",listItems.get(position).getHead());
-        bundle.putString("DETAIL",listItems.get(position).getDesc());
-        bundle.putString("IMAGE",listItems.get(position).getImage_url());
-        bundle.putInt("PRIZE",listItems.get(position).getPrize());
-        bundle.putInt("DATE",listItems.get(position).getDay());
-        bundle.putInt("PK",listItems.get(position).getPk());
-        bundle.putString("TIME","09:00to12:00");
-
-        fragmentB.setArguments(bundle);
-
-        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                mCommunicator.respond(listItems.get(position).getHead(),listItems.get(position).getDesc(),listItems.get(position).getImage_url()
-                ,listItems.get(position).getPrize(),listItems.get(position).getDay(),listItems.get(position).getPk(),"09:00to12:00");
-
-                
-            }
-        });
+        try {
 
 
+            holder.heading.setText(listItems.get(position).getHead());
+
+
+            Picasso.with(context).load(listItems.get(position).getImage_url()).into(holder.image);
+
+            frag_event_detail fragmentB = new frag_event_detail();
+            Bundle bundle = new Bundle();
+            bundle.putString("NAME", listItems.get(position).getHead());
+            bundle.putString("DETAIL", listItems.get(position).getDesc());
+            bundle.putString("IMAGE", listItems.get(position).getImage_url());
+            bundle.putInt("PRIZE", listItems.get(position).getPrize());
+            bundle.putInt("DATE", listItems.get(position).getDay());
+            bundle.putInt("PK", listItems.get(position).getPk());
+            bundle.putString("TIME", "09:00to12:00");
+
+            fragmentB.setArguments(bundle);
+
+            holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    mCommunicator.respond(listItems.get(position).getHead(), listItems.get(position).getDesc(), listItems.get(position).getImage_url()
+                            , listItems.get(position).getPrize(), listItems.get(position).getDay(), listItems.get(position).getPk(), "09:00to12:00");
+
+
+                }
+            });
+
+        }
+        catch (Exception e){
+
+            e.printStackTrace();
+        }
 
 
     }

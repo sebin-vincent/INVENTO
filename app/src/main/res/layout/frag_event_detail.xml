@@ -133,7 +133,7 @@
                 android:layout_marginBottom="70dp"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="100dp"
-                android:background="@drawable/back"
+                android:background="@mipmap/back"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="REMINDER"
@@ -149,9 +149,9 @@
                 android:layout_marginBottom="70dp"
                 android:layout_marginEnd="14dp"
                 android:layout_marginTop="100dp"
-                android:background="@drawable/back"
+                android:background="@mipmap/back"
                 android:gravity="center"
-                android:text="REGISTER"
+                android:text="SHOW MORE"
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
 

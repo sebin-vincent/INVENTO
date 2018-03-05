@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'myandroid'
+            keyPassword 'myandroid'
+            storeFile file('C:/Users/sebin vincent/Desktop/android.jks')
+            storePassword 'myandroid'
+        }
+    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.sebinvincent.invento"
@@ -15,6 +23,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }

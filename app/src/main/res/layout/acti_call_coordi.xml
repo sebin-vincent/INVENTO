@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="Cheif coordinator : SAJID MUSALIYAR"
+                android:text="Chief coordinator :MOHAMMED SAJID"
                 android:id="@+id/shaji"
                 android:textColor="@color/white"
                 android:textSize="20dp"

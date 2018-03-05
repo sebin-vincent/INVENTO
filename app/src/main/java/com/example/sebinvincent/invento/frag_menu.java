@@ -48,7 +48,7 @@ public class frag_menu extends Fragment {
         cse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),"Welcome to Cse Virus",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"#LetsInvento",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), acti_dprt_cse.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -61,7 +61,7 @@ public class frag_menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getContext(),"Welcome to Itianz",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"#LetsInvento",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), acti_dprt_it.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -74,7 +74,7 @@ public class frag_menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getContext(),"Welcome to Terror Ec",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"#LetsInvento",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), acti_dprt_ece.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -87,7 +87,7 @@ public class frag_menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getContext(),"Welcome to Royal Mech",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"#LetsInvento",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), acti_dprt_mech.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -100,7 +100,7 @@ public class frag_menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getContext(),"Welcome to Power Eee",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"#LetsInvento",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), acti_dprt_eee.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -113,7 +113,7 @@ public class frag_menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getContext(),"Welcome to Generals",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"#LetsInvento",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), acti_dprt_general.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -126,7 +126,7 @@ public class frag_menu extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getContext(),"Welcome Home",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"#LetsInvento",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), main_activiy.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
